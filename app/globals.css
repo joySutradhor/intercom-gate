@@ -1,26 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* base style */
+.max__width {
+  @apply max-w-[80vw] mx-auto;
+}
+.title {
+  @apply text-4xl font-bold;
+}
+.subTitle {
+  @apply text-2xl font-bold;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* .commonbtn {
+  @apply  flex items-center gap-2 cursor-pointer bg-[#ffffff] py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-black;
+} */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* .primary__button {
+  @apply   ;
+} */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* common styles */
+
+/* page styles */
+
