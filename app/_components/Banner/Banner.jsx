@@ -66,18 +66,18 @@ const Banner = () => {
       </div>
 
       {/* intercom sims */}
-      <div className="mt-10 bg-gray-50 p-10 rounded-2xl">
-        <div className="grid grid-cols-3 gap-10 ">
-          <div className="flex flex-col justify-between">
+      <div className=" bg-gray-50 mt-10 px-10 rounded-2xl" id="intercom">
+        <div className=" ">
+          <div className="flex items-center justify-between">
             <div>
-              <div>
+              {/* <div>
                 <CommonBtn
                   btnText="Intercom Sims"
                   url="/"
                   className="shadow mb-5"
                   icon={BsSim}
                 />
-              </div>
+              </div> */}
               <h2 className="subTitle mb-2">30-Day Rolling Contract </h2>
               <p>
                 All SIMs operate on a 30-day rolling contract, giving you
@@ -102,64 +102,68 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="p-5 bg-white rounded-2xl group cursor-pointer">
-            <h5 className="font-semibold mb-2 text-sm">
-              30-day rolling contract on the O2 network
-            </h5>
-            <div>
-              <h3 className="text-xl font-bold text-black/80 mb-1">
-                Domestic Sim
-              </h3>
-              <p className="mb-4 ">
-                Designed for single residential properties (one household).{" "}
-              </p>
-              <h4 className="">
-                Price: <span className="text-2xl font-bold italic">£5.00</span>{" "}
-                per month
-              </h4>
+          <div className="grid grid-cols-3 gap-10 mt-5 pb-10 ">
+            <div className="p-5 bg-white rounded-2xl group cursor-pointer shadow">
+              <h5 className="font-semibold mb-2 text-sm">
+                30-day rolling contract on the O2 network
+              </h5>
+              <div>
+                <h3 className="text-xl font-bold text-black/80 mb-1">
+                  Domestic Sim
+                </h3>
+                <p className="mb-4 ">
+                  Designed for single residential properties (one household).{" "}
+                </p>
+                <h4 className="">
+                  Price:{" "}
+                  <span className="text-2xl font-bold italic">£5.00</span> per
+                  month
+                </h4>
+              </div>
+
+              <div className="mt-8">
+                <Link href="/gate-form">
+                  <button className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black   ease-in-out duration-500  group-hover:text-white">
+                    Sign Up
+                    <span>
+                      {" "}
+                      <MdOutlineArrowOutward />{" "}
+                    </span>
+                  </button>
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-8">
-              <Link href="/gate-form">
-                <button className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black   ease-in-out duration-500  group-hover:text-white">
-                  Sign Up
-                  <span>
-                    {" "}
-                    <MdOutlineArrowOutward />{" "}
-                  </span>
-                </button>
-              </Link>
-            </div>
-          </div>
+            {/* second card */}
+            <div className="p-5 bg-white rounded-2xl group cursor-pointer shadow">
+              <h5 className="font-semibold mb-2 text-sm">
+                30-day rolling contract on the O2 network
+              </h5>
+              <div>
+                <h3 className="text-xl font-bold text-black/80 mb-1">
+                  Commercial SIMS
+                </h3>
+                <p className="mb-4 ">
+                  Ideal for flats, apartment blocks, offices
+                </p>
+                <h4 className="">
+                  Price:{" "}
+                  <span className="text-2xl font-bold italic">£15.00</span> per
+                  month
+                </h4>
+              </div>
 
-          {/* second card */}
-          <div className="p-5 bg-white rounded-2xl group cursor-pointer">
-            <h5 className="font-semibold mb-2 text-sm">
-              30-day rolling contract on the O2 network
-            </h5>
-            <div>
-              <h3 className="text-xl font-bold text-black/80 mb-1">
-                Commercial SIMS
-              </h3>
-              <p className="mb-4 ">
-                Ideal for flats, apartment blocks, offices
-              </p>
-              <h4 className="">
-                Price: <span className="text-2xl font-bold italic">£15.00</span>{" "}
-                per month
-              </h4>
-            </div>
-
-            <div className="mt-8">
-              <Link href="/gate-form">
-                <button className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black   ease-in-out duration-500  group-hover:text-white">
-                  Sign Up
-                  <span>
-                    {" "}
-                    <MdOutlineArrowOutward />{" "}
-                  </span>
-                </button>
-              </Link>
+              <div className="mt-8">
+                <Link href="/gate-form">
+                  <button className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black   ease-in-out duration-500  group-hover:text-white">
+                    Sign Up
+                    <span>
+                      {" "}
+                      <MdOutlineArrowOutward />{" "}
+                    </span>
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

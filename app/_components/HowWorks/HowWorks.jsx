@@ -37,16 +37,15 @@ const HowWorks = () => {
               icon={MdOutlineArrowOutward}
             /> */}
 
-            <button
-              onClick={() => setWorks(true)}
-              className="flex items-center gap-2 cursor-pointer bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-white"
-            >
-              Intercom Sims{" "}
-              <span>
-                {" "}
-                <MdOutlineArrowOutward />{" "}
-              </span>
-            </button>
+            <Link href="/">
+              <button className="flex items-center gap-2 cursor-pointer bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-white">
+                Intercom Sims{" "}
+                <span>
+                  {" "}
+                  <MdOutlineArrowOutward />{" "}
+                </span>
+              </button>
+            </Link>
 
             <CommonBtn
               btnText="Get Sim"
@@ -85,14 +84,15 @@ const HowWorks = () => {
                 </h5>
                 <div>
                   <h3 className="text-xl font-bold text-black/80 mb-1">
-                    Domestic Sim
+                    Gate SIM
                   </h3>
-                  <p className="mb-4 ">
-                    Designed for single residential properties (one household).{" "}
+                  <p className="mb-1 ">
+                    Ideal for dial to open devices, no more top ups.
                   </p>
+                  <p className="mb-4 font-medium italic">Billed annually</p>
                   <h4 className="">
                     Price:{" "}
-                    <span className="text-2xl font-bold italic">£5.00</span> per
+                    <span className="text-2xl font-bold italic">£1.75</span> per
                     month
                   </h4>
                 </div>
@@ -113,20 +113,6 @@ const HowWorks = () => {
           </div>
         </div>
       </div>
-
-      {/* works modal  */}
-
-      {works && (
-        <WorksModal
-          open={works}
-          onClose={() => setWorks(false)}
-          title="How It Works"
-          description="Once your SIM is installed, we allow a 3-month usage period. Charged at the rate stated. 
-This gives us enough data to calculate your average consumption and ensure you are on the 
-most suitable package."
-          descriptionTwo="If any changes are required, you will always be informed in advance."
-        />
-      )}
 
       <div className="bg-white py-5 px-10 rounded-full mt-10">
         <div className=" text-black text-xl ">

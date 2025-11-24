@@ -21,12 +21,12 @@ const Navbar = () => {
            <Image src={logo} alt="intercom sim logo" className="w-[5vw] h-full" height={1000} width={1000} />
 
           <div className="flex gap-x-5 items-center">
-            <CommonBtn
+            {/* <CommonBtn
               btnText="Sign Up"
               url="/gate-form"
               icon={MdOutlineArrowOutward}
               className="shadow"
-            />
+            /> */}
 
             <CommonBtn
               className="bg-black text-white px-6"
