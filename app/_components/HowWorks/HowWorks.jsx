@@ -13,10 +13,10 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const HowWorks = () => {
   const [works, setWorks] = useState(false);
   return (
-    <div className="py-[5vh] max__width">
+    <div className="pt-[15vh] max__width">
       <div className="grid grid-cols-2 items-center gap-[5%] h-full">
-        <div className="p-10 bg-white rounded-2xl h-full">
-          <h2 className="title"> How It Works</h2>
+        <div className="p-10 border bg-white border-black/10 rounded-2xl h-full">
+          <h2 className="subTitle"> How It Works</h2>
           <div className="pt-5 pb-10">
             <p className="mb-2">
               Once your SIM is installed, we allow a 3-month usage period.
@@ -57,7 +57,7 @@ const HowWorks = () => {
         </div>
 
         {/* intercom sims */}
-        <div className=" bg-white p-10 rounded-2xl">
+        <div className=" bg-white border border-black/10 p-10 rounded-2xl">
           <div className=" ">
             <div className="flex flex-col     ">
               <div>
@@ -123,30 +123,28 @@ const HowWorks = () => {
         </div>
       </div>
 
-      <div className="bg-white py-5 px-10 rounded-full mt-10">
-        <div className=" text-black text-xl ">
-          <div className="max__width flex items-center justify-between py-2">
-            <div className="flex items-center gap-5">
-              <div className="flex items-center gap-1">
-                <MdPhone size={20} />
-                <span>+880 1234 567 890</span>
+      <div className="pb-[15vh]">
+        <div className="bg-gray-100 py-5 px-10 rounded-full mt-10 ">
+          <div className=" text-black text-xl ">
+            <div className="max__width flex items-center justify-between py-2">
+              <div className="flex items-center gap-5">
+                <div className="flex items-center gap-1">
+                  <MdEmail size={20} />
+                  <span>info@gatesim.com</span>
+                </div>
               </div>
-              <div className="flex items-center gap-1">
-                <MdEmail size={20} />
-                <span>info@gatesim.com</span>
-              </div>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-gray-300">
-                <FaFacebookF size={20} />
-              </a>
-              <a href="#" className="hover:text-gray-300">
-                <FaInstagram size={20} />
-              </a>
-              <a href="#" className="hover:text-gray-300">
-                <FaLinkedinIn size={20} />
-              </a>
+              <div className="flex items-center gap-4">
+                <a href="#" className="hover:text-gray-300">
+                  <FaFacebookF size={20} />
+                </a>
+                <a href="#" className="hover:text-gray-300">
+                  <FaInstagram size={20} />
+                </a>
+                <a href="#" className="hover:text-gray-300">
+                  <FaLinkedinIn size={20} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
