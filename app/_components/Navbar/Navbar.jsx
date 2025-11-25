@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <CommonBtn
               className="bg-black text-white px-6"
-              btnText="Contact Us"
+              btnText="Email Us"
               url="/contact"
               icon={MdOutlineArrowOutward}
             />

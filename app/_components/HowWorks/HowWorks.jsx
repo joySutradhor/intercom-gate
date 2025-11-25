@@ -59,7 +59,7 @@ const HowWorks = () => {
         {/* intercom sims */}
         <div className=" bg-white p-10 rounded-2xl">
           <div className=" ">
-            <div className="flex flex-col    ">
+            <div className="flex flex-col     ">
               <div>
                 <div>
                   <CommonBtn
@@ -78,7 +78,7 @@ const HowWorks = () => {
             </div>
 
             <div className="">
-              <div className="mt-5 p-5 border border-black/10 rounded-2xl group cursor-pointer ">
+              <div className="mt-5 p-5  bg-gray-50  rounded-2xl group cursor-pointer relative">
                 <h5 className="font-semibold mb-2 text-sm">
                   30-day rolling contract on the O2 network
                 </h5>
@@ -108,6 +108,15 @@ const HowWorks = () => {
                     </button>
                   </Link>
                 </div>
+
+                {/* SIM card style notch */}
+                <div className="absolute bottom-0 right-0 w-16 h-16 bg-white clip-sim"></div>
+
+                <style jsx>{`
+                  .clip-sim {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 100% 0);
+                  }
+                `}</style>
               </div>
             </div>
           </div>
