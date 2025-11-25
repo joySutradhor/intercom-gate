@@ -6,21 +6,19 @@ import Navbar from "./_components/Navbar/Navbar";
 export default function Home() {
   return (
     <div className="relative">
-      {/* FIXED HERO */}
-      <section className="fixed top-0 left-0 w-full -z-10">
+      {/* FIXED HERO (Navbar + Banner) */}
+      <div className="fixed inset-0 h-screen w-full z-0">
         <Navbar />
         <Banner />
-      </section>
+      </div>
 
-      {/* Spacer to avoid content being hidden behind fixed hero */}
-      <div className="h-screen  "></div>
-      {/* Optional extra sections */}
-      <div className=" bg-black/10  backdrop-blur-2xl z-50">
-        <section className="relative z-50 ">
+      {/* SCROLL CONTENT - Overlaps the fixed hero */}
+      <div className="relative z-10 mt-[100vh]">
+        <section className="bg-black/10 backdrop-blur-2xl">
           <IntercomSim />
         </section>
-        {/* NEXT SECTION (scrolls over the hero) */}
-        <section className=" relative ">
+
+        <section className="bg-black/10 backdrop-blur-2xl">
           <HowWorks />
         </section>
       </div>
