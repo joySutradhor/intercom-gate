@@ -13,7 +13,7 @@ const Hero = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
       {/* CONTENT */}
       <div className="relative z-50">
         <Banner />

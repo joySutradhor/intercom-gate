@@ -9,14 +9,14 @@ html {
   @apply max-w-[80vw] mx-auto;
 }
 .title {
-  @apply text-5xl font-bold text-white;
+  @apply text-5xl font-bold text-white text-shadow-2xs ;
 }
 .subTitle {
-  @apply text-3xl font-bold text-white;
+  @apply text-3xl font-bold text-white text-shadow-2xs;
 }
 
 .para {
-  @apply text-base font-medium text-white
+  @apply text-base font-medium text-white text-shadow-2xs ;
 }
 
 /* .commonbtn {
