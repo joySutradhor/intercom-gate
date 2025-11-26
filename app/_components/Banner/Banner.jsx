@@ -12,16 +12,16 @@ import WorksModal from "../Utilites/Modal/WorksModal";
 const Banner = () => {
   const [works, setWorks] = useState(false);
   return (
-    <div className="pt-[15vh] max__width">
+    <div className="max__width">
       <div className="grid grid-cols-2 items-center gap-[10%]">
         <div className="">
-          <h2 className="title"> 4G & GSM Intercom SIM Cards</h2>
+          <h2 className="title "> 4G & GSM Intercom SIM Cards</h2>
           <div className="pt-5 pb-10">
-            <p className="mb-2">
+            <p className="mb-2 para">
               Welcome to Intercom SIM Cards , the easy and affordable way to
               keep your intercom or gate entry system connected.
             </p>
-            <p className="">
+            <p className="para">
               Intercom SIM Cards Simple, Reliable & Low-Cost Perfect for Gate
               Intercoms, Door Entry Systems & GSM Access Units
             </p>
