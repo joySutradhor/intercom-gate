@@ -9,13 +9,13 @@ const Hero = () => {
         src="/intercom-video.mp4"
         autoPlay
         loop
+        muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
       <div className="absolute inset-0 bg-black/40"></div>
       {/* CONTENT */}
       <div className="relative z-50">
-        <Navbar />
         <Banner />
       </div>
     </div>

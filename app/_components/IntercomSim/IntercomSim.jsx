@@ -5,52 +5,30 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const IntercomSim = () => {
   return (
-    <div className="pt-[15vh]">
+    <div className="">
       {/* intercom sims */}
-      <div className="max__width  bg-gray-100  px-10   rounded-2xl" id="intercom">
-        <div className=" py-20">
+      <div className="max__width  bg-black/10 backdrop-blur-md  px-10   rounded-2xl" id="intercom">
+        <div className=" py-10">
           <div className="flex items-center justify-center text-center pb-5">
-            <div>
-              {/* <div>
-                <CommonBtn
-                  btnText="Intercom Sims"
-                  url="/"
-                  className="shadow mb-5"
-                  icon={BsSim}
-                />
-              </div> */}
+            <div className="text-left">
+        
               <h2 className="subTitle mb-2">30-Day Rolling Contract </h2>
-              <p className="text-base text-black/70 font-medium">
+              <p className="para">
                 All SIMs operate on a 30-day rolling contract, giving you
                 flexibility with no long-term commitment.
               </p>
             </div>
-            {/* need help */}
-            {/* <div className="py-[2vh]">
-              <h3 className="text-xl text-black/80 font-medium mb-2">
-                Need any help ?
-              </h3>
-              <div>
-                <a href="tel:01627505755" className="flex gap-3 items-center">
-                  <div className="bg-white rounded-full p-3">
-                    <SlCallOut />
-                  </div>
-                  <p className="font-semibold hover:text-blue-700 transition">
-                    016 27 50 57 55
-                  </p>
-                </a>
-              </div>
-            </div> */}
+          
           </div>
 
-          <div className="max-w-[70%] mx-auto">
-            <div className="grid grid-cols-2 gap-16 mt-5  ">
-              <div className="relative p-5 bg-white rounded-2xl group cursor-pointer  overflow-hidden">
+          <div className="">
+            <div className="grid grid-cols-1 gap-5   ">
+              <div className="relative p-5 bg-black/10 backdrop-blur-sm rounded-2xl group cursor-pointer text-white    overflow-hidden">
                 <h5 className="font-semibold mb-2 text-sm">
                   30-day rolling contract on the O2 network
                 </h5>
                 <div>
-                  <h3 className="text-xl font-bold text-black/80 mb-1">
+                  <h3 className="text-xl font-bold text-white mb-1">
                     Domestic Sim
                   </h3>
                   <p className="mb-4">
@@ -85,12 +63,12 @@ const IntercomSim = () => {
               </div>
 
               {/* second card */}
-              <div className="p-5 bg-white rounded-2xl group cursor-pointer  relative">
+              <div className="p-5 bg-black/10 backdrop-blur-sm rounded-2xl group cursor-pointer text-white   relative">
                 <h5 className="font-semibold mb-2 text-sm">
                   30-day rolling contract on the O2 network
                 </h5>
                 <div>
-                  <h3 className="text-xl font-bold text-black/80 mb-1">
+                  <h3 className="text-xl font-bold text-white mb-1">
                     Commercial SIMS
                   </h3>
                   <p className="mb-4 ">
