@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import hero from "@/public/sim.jpg";
 import CommonBtn from "../Utilites/CommonBtn/CommonBtn";
-import { MdOutlineArrowOutward } from "react-icons/md";
+import { MdEmail, MdOutlineArrowOutward } from "react-icons/md";
 import { SlCallOut } from "react-icons/sl";
 import { BsSim } from "react-icons/bs";
 import Link from "next/link";
@@ -12,6 +12,7 @@ import IntercomSim from "../IntercomSim/IntercomSim";
 import logo from "@/public/logo.png";
 import banner from "@/public/banner.jpg";
 import { IoMdClose } from "react-icons/io";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Banner = () => {
   const [works, setWorks] = useState(false);
@@ -33,7 +34,7 @@ const Banner = () => {
           </nav>
         </div>
         <div className="flex justify-center items-center h-full relative  max-w-4xl mx-auto  ">
-          <div className=" bg-black/10 backdrop-blur-xl p-10 rounded-2xl z-50 shadow">
+          <div className=" bg-black/10 backdrop-blur-xl p-10 rounded-3xl z-50 shadow">
             <h2 className="title "> 4G & GSM Intercom SIM Cards</h2>
             <div className="pt-5 pb-10">
               <p className="mb-2 para max-w-2xl   ">
@@ -203,7 +204,10 @@ const Banner = () => {
               <div className="mt-10 relative">
                 <div className=" p-5  bg-black/10  rounded-2xl group cursor-pointer  shadow">
                   <div>
-                    <button className="absolute right-0 top-0 text-shadow-2xs font-medium text-sm rounded-2xl rounded-tr-2xl bg-white py-1.5 px-6 italic"> Billed annually</button>
+                    <button className="absolute right-0 top-0 text-shadow-2xs font-medium text-sm rounded-2xl rounded-tr-2xl bg-white py-1.5 px-6 italic">
+                      {" "}
+                      Billed annually
+                    </button>
                   </div>
                   <h5 className="font-semibold mb-2 text-sm text-white">
                     30-day rolling contract on the O2 network
@@ -271,6 +275,36 @@ most suitable package."
           descriptionTwo="If any changes are required, you will always be informed in advance."
         />
       )}
+
+      {/* footer */}
+      <div className="">
+        <div className="px-[5%] mb-10  text-white  w-full fixed bottom-0 left-0  ">
+          <div >
+            <div className="  text-xl ">
+              <div className="flex items-center gap-x-5 justify-between  w-full ">
+                <div className="flex items-center  gap-5 bg-black/10 backdrop-blur-2xl py-2 px-8 rounded-full">
+                  <div className="flex items-center gap-1">
+                    <MdEmail size={20} />
+                    <span>info@gatesim.com</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 bg-black/10 backdrop-blur-2xl py-3 px-8 rounded-full">
+                  <a href="#" className="hover:text-gray-300">
+                    <FaFacebookF size={20} />
+                  </a>
+                  <a href="#" className="hover:text-gray-300">
+                    <FaInstagram size={20} />
+                  </a>
+                  <a href="#" className="hover:text-gray-300">
+                    <FaLinkedinIn size={20} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

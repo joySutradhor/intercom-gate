@@ -8,7 +8,7 @@ const WorksModal = ({ open, onClose, title, description, descriptionTwo }) => {
 
   return (
     <div className="fixed inset-0 bg-black/10 backdrop-blur-xl flex items-center justify-center z-50 ">
-      <div className="border border-white/10 backdrop-blur-xl  max-w-3xl mx-auto rounded-xl hover:shadow-lg p-6 relative">
+      <div className="border border-white/10 backdrop-blur-xl  max-w-2xl mx-auto rounded-2xl hover:shadow-lg p-6 relative">
         {/* Close Button */}
         <button
           onClick={onClose}
