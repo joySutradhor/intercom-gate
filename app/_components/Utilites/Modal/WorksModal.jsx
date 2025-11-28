@@ -7,18 +7,18 @@ const WorksModal = ({ open, onClose, title, description, descriptionTwo }) => {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/10 backdrop-blur-xl flex items-center justify-center z-50 ">
-      <div className="border border-white/10 backdrop-blur-xl  max-w-2xl mx-auto rounded-2xl hover:shadow-lg p-6 relative">
+    <div className="fixed inset-0 bg-white   flex items-center justify-center z-50 ">
+      <div className="border border-black/10 backdrop-blur-xl  max-w-2xl mx-auto rounded-2xl hover:shadow-lg p-6 relative">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 hover:text-white text-red-500 text-3xl cursor-pointer"
+          className="absolute top-3 right-3 hover:text-red-700  text-red-500 text-3xl cursor-pointer"
         >
           ×
         </button>
 
         {/* Title */}
-        <h2 className="text-3xl text-white font-bold mb-3  border-b border-black/10 pb-3">
+        <h2 className="text-3xl text-black/80 font-bold mb-3  border-b border-black/10 pb-3">
           {title}
         </h2>
 
