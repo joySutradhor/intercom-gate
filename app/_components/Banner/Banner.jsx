@@ -1,24 +1,17 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import hero from "@/public/sim.jpg";
-import CommonBtn from "../Utilites/CommonBtn/CommonBtn";
-import { MdEmail, MdOutlineArrowOutward } from "react-icons/md";
-import { SlCallOut } from "react-icons/sl";
+import { MdOutlineArrowOutward } from "react-icons/md";
 import { BsArrowUpRight, BsSim } from "react-icons/bs";
-import Link from "next/link";
-import WorksModal from "../Utilites/Modal/WorksModal";
-import IntercomSim from "../IntercomSim/IntercomSim";
 import logo from "@/public/logo.png";
-import banner from "@/public/banner.jpg";
 import { IoMdClose } from "react-icons/io";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import Footer from "../Footer/Footer";
+import WorksModalContent from "../WorksModalContent/WorksModalContent";
 
 const Banner = () => {
   const [works, setWorks] = useState(false);
   const [intercom, seIntercom] = useState(false);
   const [activeCancel, setActiveCancel] = useState(false);
-  const [step, setStep] = useState(1);
   const [gateForm, setGateForm] = useState(false);
 
   const [activeTab, setActiveTab] = useState("activate");
@@ -90,34 +83,31 @@ const Banner = () => {
               <Image
                 src={logo}
                 alt="intercom sim logo"
-                className="w-[10vw] h-full "
+                className="ic__logo "
                 height={1000}
                 width={1000}
               />
             </div>
           </nav>
         </div>
-        <div className="flex justify-center items-center h-full relative  max-w-4xl mx-auto  ">
-          <div className=" bg-white  p-10 rounded-3xl z-50 shadow">
+
+        {/* content parent */}
+        <div className="ic__h__parent    ">
+          <div className=" ic__h__child__parent">
             <h2 className="title "> 4G & GSM Intercom SIM Cards</h2>
-            <div className="pt-5 pb-10">
-              <p className="mb-2 para max-w-2xl   ">
+            <div className="ic__h__para__wrapper para">
+              <p>
                 Welcome to Intercom SIM Cards , the easy and affordable way to
                 keep your intercom or gate entry system connected.
               </p>
-              <p className="para max-w-2xl  ">
+              <p>
                 Intercom SIM Cards Simple, Reliable & Low-Cost Perfect for Gate
                 Intercoms, Door Entry Systems & GSM Access Units
               </p>
             </div>
-            <div className="flex gap-x-5 items-center ">
-              {/* <CommonBtn
-              className="bg-black text-black px-6"
-              btnText="How Its Works"
-              url="/contact"
-              icon={MdOutlineArrowOutward}
-            /> */}
 
+            {/* btn group parent */}
+            <div className="ic__h__btns__parent ">
               <button onClick={() => handleWorks()} className="btn__sytle">
                 How Its Works{" "}
                 <span>
@@ -148,155 +138,52 @@ const Banner = () => {
         </div>
       </div>
 
-      {intercom && (
-        <div
-          className=" fixed inset-0   max-w-5xl mx-auto flex items-center justify-center z-50     "
-          id="intercom"
-        >
-          <div className=" p-10 bg-white  rounded-2xl">
-            <div className="flex justify-between pb-10 ">
-              <div className="text-left">
-                <h2 className="subTitle mb-2">30-Day Rolling Contract </h2>
-                <p className="para">
-                  All SIMs operate on a 30-day rolling contract, giving you
-                  flexibility with no long-term commitment.
-                </p>
+      {/* intercom modal */}
+      <div className="">
+        {intercom && (
+          <div
+            className=" fixed inset-0 bg-white xl:bg-transparent   max-w-5xl mx-auto flex items-center justify-center z-500     "
+            id="intercom"
+          >
+            <div className=" ic__i__wrapper ">
+              <div className="flex justify-between pb-10 ">
+                <div>
+                  <h2 className="subTitle mb-2">30-Day Rolling Contract </h2>
+                  <p className="para">
+                    All SIMs operate on a 30-day rolling contract, giving you
+                    flexibility with no long-term commitment.
+                  </p>
+                </div>
+                {/* Close Button */}
+                <button
+                  onClick={() => seIntercom(false)}
+                  className=" hover:text-red-700 text-red-500 text-3xl cursor-pointer"
+                >
+                  <IoMdClose />
+                </button>
               </div>
-              {/* Close Button */}
-              <button
-                onClick={() => seIntercom(false)}
-                className=" hover:text-red-700 text-red-500 text-3xl cursor-pointer"
-              >
-                <IoMdClose />
-              </button>
-            </div>
 
-            <div className="">
-              <div className="grid grid-cols-2 gap-10   rounded-2xl   ">
-                <div
-                  className="relative p-5 bg-gray-100  rounded-2xl group cursor-pointer text-black overflow-hidden "
-                  style={{
-                    clipPath:
-                      "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
-                    borderRadius: "16px",
-                  }}
-                >
-                  <h5 className="font-semibold mb-2 text-sm">
-                    30-day rolling contract
-                  </h5>
-                  <div>
-                    <h3 className="text-xl font-bold text-black mb-1">
-                      Domestic SIM
-                    </h3>
-                    <p className="mb-4">
-                      Designed for single residential properties (one
-                      household).
-                    </p>
-                    <h4>
-                      Price:{" "}
-                      <span className="text-2xl font-bold italic">£5.00</span>{" "}
-                      per month
-                    </h4>
-                  </div>
-
-                  <div className="mt-8">
-                    <button
-                      onClick={() => handleGateForm()}
-                      className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black ease-in-out duration-500 group-hover:text-white"
-                    >
-                      Sign Up
-                      <BsArrowUpRight className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* second card */}
-                <div
-                  style={{
-                    clipPath:
-                      "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
-                    borderRadius: "16px",
-                  }}
-                  className="p-5 shadow bg-gray-100  rounded-2xl group cursor-pointer text-black   relative"
-                >
-                  <h5 className="font-semibold mb-2 text-sm">
-                    30-day rolling contract
-                  </h5>
-                  <div>
-                    <h3 className="text-xl font-bold text-black mb-1">
-                      Commercial SIM
-                    </h3>
-                    <p className="mb-4 ">
-                      Ideal for flats, apartment blocks, offices
-                    </p>
-                    <h4 className="">
-                      Price:{" "}
-                      <span className="text-2xl font-bold italic">£15.00</span>{" "}
-                      per month
-                    </h4>
-                  </div>
-
-                  <div className="mt-8">
-                    <button
-                      onClick={() => handleGateForm()}
-                      className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black   ease-in-out duration-500  group-hover:text-white"
-                    >
-                      Sign Up
-                      <span>
-                        {" "}
-                        <MdOutlineArrowOutward />{" "}
-                      </span>
-                    </button>
-                  </div>
-
-                  {/* SIM card style notch */}
-                  {/* <div className="absolute bottom-0 right-0 w-16 h-16 bg-white rounded-br-2xl  clip-sim"></div>
-
-                  <style jsx>{`
-                    .clip-sim {
-                      clip-path: polygon(
-                        0 0,
-                        100% 0,
-                        100% 100%,
-                        0 100%,
-                        100% 0
-                      );
-                    }
-                  `}</style> */}
-                </div>
-                <div
-                  style={{
-                    clipPath:
-                      "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
-                    borderRadius: "16px",
-                  }}
-                  className=" relative"
-                >
-                  <div className=" p-5  bg-gray-100   rounded-2xl group cursor-pointer  shadow">
-                    <div>
-                      <button className="absolute right-0 top-0 text-shadow-2xs font-medium text-sm rounded-2xl rounded-tr-2xl bg-[#111] text-white py-1.5 px-6 italic">
-                        {" "}
-                        Billed annually
-                      </button>
-                    </div>
-                    <h5 className="font-semibold mb-2 text-sm text-black">
+              <div className="ic__i__card__container">
+                <div className="ic__i__cards__parent   ">
+                  <div
+                    className="relative   group  ic__card__parent "
+                    style={{
+                      clipPath:
+                        "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
+                      borderRadius: "16px",
+                    }}
+                  >
+                    <h5 className="ic__i__card__sm__title">
                       30-day rolling contract
                     </h5>
                     <div>
-                      <h3 className="text-xl font-bold text-black mb-1">
-                        Gate SIM
-                      </h3>
-                      <p className="mb-1 para">
-                        Ideal for dial to open devices, no more top ups.
+                      <h3 className="ic__i__card__title">Domestic SIM</h3>
+                      <p className="mb-4">
+                        Designed for single residential properties (one
+                        household).
                       </p>
-                      <p className="mb-4 font-medium italic text-black">
-                        Billed annually
-                      </p>
-                      <h4 className="text-black">
-                        Price:{" "}
-                        <span className="text-2xl font-bold italic ">
-                          £1.75
-                        </span>{" "}
+                      <h4>
+                        Price: <span className="ic__i__card__price">£5.00</span>{" "}
                         per month
                       </h4>
                     </div>
@@ -304,7 +191,42 @@ const Banner = () => {
                     <div className="mt-8">
                       <button
                         onClick={() => handleGateForm()}
-                        className="flex items-center gap-2 cursor-pointer group-hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5 bg-white text-black   ease-in-out duration-500  group-hover:text-white"
+                        className="btn__sytle"
+                      >
+                        Sign Up
+                        <BsArrowUpRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* second card */}
+                  <div
+                    style={{
+                      clipPath:
+                        "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
+                      borderRadius: "16px",
+                    }}
+                    className="ic__card__parent group    relative"
+                  >
+                    <h5 className="ic__i__card__sm__title">
+                      30-day rolling contract
+                    </h5>
+                    <div>
+                      <h3 className="ic__i__card__title">Commercial SIM</h3>
+                      <p className="mb-4 ">
+                        Ideal for flats, apartment blocks, offices
+                      </p>
+                      <h4 className="">
+                        Price:{" "}
+                        <span className="ic__i__card__price">£15.00</span> per
+                        month
+                      </h4>
+                    </div>
+
+                    <div className="mt-8">
+                      <button
+                        onClick={() => handleGateForm()}
+                        className="btn__sytle"
                       >
                         Sign Up
                         <span>
@@ -313,32 +235,65 @@ const Banner = () => {
                         </span>
                       </button>
                     </div>
+                  </div>
 
-                    {/* SIM card style notch */}
-                    {/* <div className="absolute bottom-0 right-0 w-16 h-16 bg-white rounded-br-2xl clip-sim"></div>
+                  <div
+                    style={{
+                      clipPath:
+                        "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
+                      borderRadius: "16px",
+                    }}
+                    className=" relative"
+                  >
+                    <div className="relative   group  ic__card__parent group">
+                      <div>
+                        <button className="absolute right-0 top-0 text-shadow-2xs font-medium text-sm rounded-2xl rounded-tr-2xl bg-[#111] text-white py-1.5 px-6 italic">
+                          {" "}
+                          Billed annually
+                        </button>
+                      </div>
+                      <h5 className="ic__i__card__sm__title text-black">
+                        30-day rolling contract
+                      </h5>
+                      <div>
+                        <h3 className="ic__i__card__title">Gate SIM</h3>
+                        <p className="mb-1 para">
+                          Ideal for dial to open devices, no more top ups.
+                        </p>
+                        <p className="mb-4 font-medium italic text-black">
+                          Billed annually
+                        </p>
+                        <h4 className="text-black">
+                          Price:{" "}
+                          <span className="ic__i__card__price ">£1.75</span> per
+                          month
+                        </h4>
+                      </div>
 
-                  <style jsx>{`
-                    .clip-sim {
-                      clip-path: polygon(
-                        0 0,
-                        100% 0,
-                        100% 100%,
-                        0 100%,
-                        100% 0
-                      );
-                    }
-                  `}</style> */}
+                      <div className="mt-8">
+                        <button
+                          onClick={() => handleGateForm()}
+                          className="btn__sytle"
+                        >
+                          Sign Up
+                          <span>
+                            {" "}
+                            <MdOutlineArrowOutward />{" "}
+                          </span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {activeCancel && (
         <div
-          className=" fixed inset-0   max-w-5xl mx-auto flex items-center justify-center z-50     "
+          className=" fixed inset-0 bg-white xl:bg-transparent  max-w-5xl mx-auto flex items-center justify-center z-50     "
           id="intercom"
         >
           <section className=" p-6 sm:px-10 sm:py-16 bg-white  rounded-2xl ">
@@ -469,20 +424,9 @@ const Banner = () => {
       )}
 
       {/* works modal  */}
-
       {works && (
-        //         <WorksModal
-        //           open={works}
-        //           onClose={() => setWorks(false)}
-        //           title="How It Works"
-        //           description="Once your SIM is installed, we allow a 3-month usage period. Charged at the rate stated.
-        // This gives us enough data to calculate your average consumption and ensure you are on the
-        // most suitable package."
-        //           descriptionTwo="If any changes are required, you will always be informed in advance."
-        //         />
-
-        <div className="fixed inset-0 bg-white   flex items-center justify-center z-50 ">
-          <div className="border border-black/10 backdrop-blur-xl  max-w-2xl mx-auto rounded-2xl hover:shadow-lg p-6 relative">
+        <div className="fixed inset-0 bg-white   flex items-center justify-center z-50 lR__gap ">
+          <div className="ic__w__parent__wrapper relative">
             {/* Close Button */}
             <button
               onClick={() => setWorks(false)}
@@ -491,33 +435,21 @@ const Banner = () => {
               ×
             </button>
 
-            {/* Title */}
-            <h2 className="text-3xl text-black/80 font-bold mb-3  border-b border-black/10 pb-3">
-              How It Works
-            </h2>
+            <div>
+              <WorksModalContent />
 
-            {/* Description */}
-            <p className=" para">
-              Once your SIM is installed, we allow a 3-month usage period.
-              Charged at the rate stated.This gives us enough data to calculate
-              your average consumption and ensure you are on the most suitable
-              package.
-            </p>
-            <p className=" mt-2 para">
-              If any changes are required, you will always be informed in
-              advance.
-            </p>
-
-            <div className="border-t border-white/10 mt-10 pt-5">
-              <button 
-              onClick={() => setGateForm(true)}
-              className="flex items-center gap-2 cursor-pointer hover:text-white hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-black bg-white ">
-                Sign Up Now{" "}
-                <span>
-                  {" "}
-                  <MdOutlineArrowOutward />{" "}
-                </span>
-              </button>
+              <div className="border-t border-white/10 mt-10 pt-5">
+                <button
+                  onClick={() => setGateForm(true)}
+                  className="btn__sytle "
+                >
+                  Sign Up Now{" "}
+                  <span>
+                    {" "}
+                    <MdOutlineArrowOutward />{" "}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1012,34 +944,9 @@ const Banner = () => {
       )}
 
       {/* footer */}
-      <div className="">
-        <div className="px-[5%] mb-10  text-black  w-full fixed bottom-0 left-0  ">
-          <div>
-            <div className="  text-xl ">
-              <div className="flex items-center gap-x-5 justify-between  w-full ">
-                <div className="flex items-center  gap-5 bg-white backdrop-blur-2xl py-2 px-8 rounded-full">
-                  <div className="flex items-center gap-1">
-                    <MdEmail size={20} />
-                    <span>info@gatesim.com</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 bg-white backdrop-blur-2xl py-3 px-8 rounded-full">
-                  <a href="#" className="hover:text-gray-300">
-                    <FaFacebookF size={20} />
-                  </a>
-                  <a href="#" className="hover:text-gray-300">
-                    <FaInstagram size={20} />
-                  </a>
-                  <a href="#" className="hover:text-gray-300">
-                    <FaLinkedinIn size={20} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

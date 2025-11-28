@@ -1,8 +1,4 @@
-import React from "react";
-import CommonBtn from "../Utilites/CommonBtn/CommonBtn";
-import { MdOutlineArrowOutward } from "react-icons/md";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { MdPhone, MdEmail } from "react-icons/md";
+
 
 import logo from "@/public/logo.png";
 import Image from "next/image";

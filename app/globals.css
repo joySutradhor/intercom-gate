@@ -5,35 +5,106 @@ html {
 @import "tailwindcss";
 
 /* base style */
+.lR__gap {
+  @apply px-5 md:px-10 xl:px-0;
+}
 .max__width {
-  @apply max-w-[80vw] mx-auto;
+  @apply w-[95vw]  xl:max-w-[80vw] mx-auto;
 }
 .title {
-  @apply text-5xl font-bold text-black/80 text-shadow-2xs;
+  @apply text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-black/80 text-shadow-2xs;
 }
 .subTitle {
-  @apply text-3xl font-bold text-black/80  text-shadow-2xs;
+  @apply text-xl md:text-2xl xl:text-3xl font-bold text-black/80  text-shadow-2xs;
 }
 
 .para {
-  @apply text-base font-medium text-black/80  text-shadow-2xs;
+  @apply text-sm  xl:text-base font-medium text-black/80  text-shadow-2xs;
 }
 
 .btn__sytle {
-  @apply flex items-center gap-2 cursor-pointer bg-white text-black hover:bg-black  py-2 px-8 rounded-full text-sm font-medium border border-black/5  text-shadow-2xs shadow ease-in-out duration-500  hover:text-white
+  @apply flex items-center gap-2 cursor-pointer bg-white text-black hover:bg-black  py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-shadow-2xs hover:text-white;
 }
-
-/* .commonbtn {
-  @apply  flex items-center gap-2 cursor-pointer bg-[#ffffff] py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-black;
-} */
-
-/* .primary__button {
-  @apply   ;
-} */
 
 /* common styles */
 
 /* page styles */
+/* home banner styles */
+
+.ic__logo {
+  @apply w-[25vw] md:w-[15vw] xl:w-[10vw] h-full;
+}
+.ic__h__parent {
+  @apply flex justify-center items-center h-full relative  xl:max-w-4xl mx-auto;
+}
+
+.ic__h__child__parent {
+  @apply bg-white px-5 py-10 xl:px-10 xl:py-10 rounded-3xl z-50 shadow;
+}
+
+.ic__h__para__wrapper {
+  @apply max-w-2xl space-y-2 pt-5  pb-10;
+}
+
+.ic__h__btns__parent {
+  @apply flex flex-wrap gap-x-5 gap-y-3 xl:gap-y-0 items-center;
+}
+
+/* ================================================================= */
+/* works modal  */
+.ic__w__parent__wrapper {
+  @apply border border-black/10   max-w-2xl mx-auto  rounded-2xl hover:shadow p-6;
+}
+/* ================================================================= */
+/* ================================================================= */
+/* intercom styles  */
+.ic__i__wrapper {
+  @apply px-5 py-10 xl:p-10 bg-white  rounded-2xl;
+}
+
+.ic__i__card__container {
+  @apply max-h-[60vh] xl:max-h-screen overflow-y-scroll;
+}
+
+.ic__i__cards__parent {
+  @apply grid md:grid-cols-2 gap-10  overflow-y-scroll  rounded-2xl;
+}
+
+.ic__card__parent {
+  @apply p-5 shadow bg-gray-100  rounded-2xl cursor-pointer text-black overflow-hidden;
+}
+
+.ic__i__card__sm__title {
+  @apply font-semibold mb-2 text-sm;
+}
+.ic__i__card__title {
+  @apply text-xl font-bold text-black mb-1;
+}
+
+.ic__i__card__price {
+  @apply text-2xl font-bold italic;
+}
+/* ================================================================= */
+
+/* footer styles here */
+
+.ic__h__footer__wrapper {
+  @apply flex flex-wrap items-center gap-x-5 gap-y-2.5 xl:gap-y-0 justify-between  w-full;
+}
+
+.ic__h__footer__email {
+  @apply flex items-center gap-1 bg-white py-2 px-8 rounded-full;
+}
+
+.ic__h__icon__wrapper {
+  @apply flex items-center gap-4 bg-white backdrop-blur-2xl py-3 px-8 rounded-full;
+}
+
+.ic__h__footer__icon {
+  @apply hover:text-gray-300;
+}
+
+/* ===================================================================== */
 
 /* For Chrome, Safari, Edge */
 ::-webkit-scrollbar {
