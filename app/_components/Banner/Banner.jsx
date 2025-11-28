@@ -73,12 +73,12 @@ const Banner = () => {
   const handleGateForm = () => {
     setGateForm(true);
     setActiveCancel(false);
-    seIntercom(false) ;
+    seIntercom(false);
   };
   const handleWorks = () => {
     setWorks(true);
     setActiveCancel(false);
-    seIntercom(false) ;
+    seIntercom(false);
   };
 
   return (
@@ -118,10 +118,7 @@ const Banner = () => {
               icon={MdOutlineArrowOutward}
             /> */}
 
-              <button
-                onClick={() => handleWorks()}
-                className="btn__sytle"
-              >
+              <button onClick={() => handleWorks()} className="btn__sytle">
                 How Its Works{" "}
                 <span>
                   {" "}
@@ -129,10 +126,7 @@ const Banner = () => {
                 </span>
               </button>
 
-              <button
-                onClick={() => seIntercom(true)}
-                className="btn__sytle"
-              >
+              <button onClick={() => seIntercom(true)} className="btn__sytle">
                 Get Intercom Sim
                 <span>
                   {" "}
@@ -477,22 +471,63 @@ const Banner = () => {
       {/* works modal  */}
 
       {works && (
-        <WorksModal
-          open={works}
-          onClose={() => setWorks(false)}
-          title="How It Works"
-          description="Once your SIM is installed, we allow a 3-month usage period. Charged at the rate stated. 
-This gives us enough data to calculate your average consumption and ensure you are on the 
-most suitable package."
-          descriptionTwo="If any changes are required, you will always be informed in advance."
-        />
+        //         <WorksModal
+        //           open={works}
+        //           onClose={() => setWorks(false)}
+        //           title="How It Works"
+        //           description="Once your SIM is installed, we allow a 3-month usage period. Charged at the rate stated.
+        // This gives us enough data to calculate your average consumption and ensure you are on the
+        // most suitable package."
+        //           descriptionTwo="If any changes are required, you will always be informed in advance."
+        //         />
+
+        <div className="fixed inset-0 bg-white   flex items-center justify-center z-50 ">
+          <div className="border border-black/10 backdrop-blur-xl  max-w-2xl mx-auto rounded-2xl hover:shadow-lg p-6 relative">
+            {/* Close Button */}
+            <button
+              onClick={() => setWorks(false)}
+              className="absolute top-3 right-3 hover:text-red-700  text-red-500 text-3xl cursor-pointer"
+            >
+              ×
+            </button>
+
+            {/* Title */}
+            <h2 className="text-3xl text-black/80 font-bold mb-3  border-b border-black/10 pb-3">
+              How It Works
+            </h2>
+
+            {/* Description */}
+            <p className=" para">
+              Once your SIM is installed, we allow a 3-month usage period.
+              Charged at the rate stated.This gives us enough data to calculate
+              your average consumption and ensure you are on the most suitable
+              package.
+            </p>
+            <p className=" mt-2 para">
+              If any changes are required, you will always be informed in
+              advance.
+            </p>
+
+            <div className="border-t border-white/10 mt-10 pt-5">
+              <button 
+              onClick={() => setGateForm(true)}
+              className="flex items-center gap-2 cursor-pointer hover:text-white hover:bg-[#111] py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-black bg-white ">
+                Sign Up Now{" "}
+                <span>
+                  {" "}
+                  <MdOutlineArrowOutward />{" "}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* gate form modal  */}
       {gateForm && (
         <div className="fixed inset-0    flex items-center justify-center z-50 ">
           {/* Main Content */}
-          <main className="max-w-7xl mx-auto rounded-2xl  h-[80vh] overflow-y-scroll">
+          <main className="max-w-7xl mx-auto  border border-black/10 rounded-2xl  h-[80vh] overflow-y-scroll">
             <div className="bg-white backdrop-blur-sm rounded-lg shadow-md p-8">
               <div className="flex justify-between ">
                 <h1 className="text-3xl font-bold  text-black mb-8">
