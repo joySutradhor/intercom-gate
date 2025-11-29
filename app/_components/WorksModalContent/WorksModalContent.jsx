@@ -13,16 +13,14 @@ const WorksModalContent = () => {
         {/* Description */}
         <div className="space-y-2 para">
           <p>
-            Once your SIM is installed, we allow a 3-month usage period. Charged
-            at the rate stated.This gives us enough data to calculate your
+            Once your SIM is installed, we allow a 3-month usage period, charged
+            at the rate stated. This gives us enough data to calculate your
             average consumption and ensure you are on the most suitable package.
           </p>
           <p>
-            If any changes are required, you will always be informed in advance.
+            If any changes to your package are required, you will always be informed in advance.
           </p>
         </div>
-
-       
       </div>
     </div>
   );

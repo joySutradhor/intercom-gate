@@ -293,34 +293,33 @@ const Banner = () => {
 
       {activeCancel && (
         <div
-          className=" fixed inset-0 bg-white xl:bg-transparent  max-w-5xl mx-auto flex items-center justify-center z-50     "
+          className="fixed inset-0 flex items-center justify-center bg-white/90 z-50 px-4"
           id="intercom"
         >
-          <section className=" p-6 sm:px-10 sm:py-16 bg-white  rounded-2xl ">
+          <section className="w-full max-w-5xl bg-white rounded-2xl shadow-lg p-6 sm:p-10 xl:p-20 flex flex-col items-center justify-center relative">
             {/* Header */}
-            <div className="flex justify-between items-center mb-5">
-              <div>
-                <h2 className="text-2xl font-bold text-black">
-                  {activeTab === "activate"
-                    ? "Activate Your GateSIM"
-                    : "Cancel Your Subscription"}
-                </h2>
-                <p className="text-black/80 mt-1">
-                  {activeTab === "activate"
-                    ? "Great! You received your GateSIM. Activate it here."
-                    : "Cancel your subscription anytime. Enter your details below."}
-                </p>
-              </div>
+            <div className="flex flex-col items-center text-center mb-8 relative w-full">
+              <h2 className="subTitle">
+                {activeTab === "activate"
+                  ? "Activate Your GateSIM"
+                  : "Cancel Your Subscription"}
+              </h2>
+              <p className="text-black/80 mt-2">
+                {activeTab === "activate"
+                  ? "Great! You received your GateSIM. Activate it here."
+                  : "Cancel your subscription anytime. Enter your details below."}
+              </p>
+
               <button
                 onClick={() => setActiveCancel(false)}
-                className="text-red-500 cursor-pointer hover:text-red-700 text-3xl"
+                className="absolute top-4 right-4 text-red-500 hover:text-red-700 text-3xl cursor-pointer"
               >
                 <IoMdClose />
               </button>
             </div>
 
             {/* Tabs */}
-            <div className="flex border-b border-white/20 mb-8">
+            <div className="flex border-b border-black/20 mb-8">
               <button
                 className={`px-4 py-2 font-medium text-base cursor-pointer ${
                   activeTab === "activate"
@@ -344,16 +343,23 @@ const Banner = () => {
             </div>
 
             {/* Forms */}
-            {activeTab === "activate" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="p-5 bg-gray-100  rounded-2xl shadow">
-                  <div>
-                    <label className="block text-base font-medium mb-5 text-black">
+            <div className="w-full flex justify-center">
+              {activeTab === "activate" && (
+                <div className=" relative max-w-4xl">
+                  <div
+                    style={{
+                      clipPath:
+                        "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
+                      borderRadius: "16px",
+                    }}
+                    className="p-5 bg-gray-100 rounded-2xl shadow flex flex-col w-full"
+                  >
+                    <label className="block text-base font-medium mb-2 text-black">
                       Email Address
                       <input
                         type="email"
                         placeholder="Enter email used for subscription"
-                        className="mt-2 w-full px-3 py-2 rounded-lg  border border-black/10 text-black outline-none"
+                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -361,64 +367,73 @@ const Banner = () => {
                         We'll never share your email with anyone else.
                       </span>
                     </label>
-                  </div>
 
-                  <div className="mt-5">
                     <label className="block text-base font-medium mt-4 text-black">
                       SIM Card Number
                       <input
                         type="text"
                         placeholder="Write your number"
-                        className="mt-2 w-full px-3 py-2 rounded-lg  border border-black/10 text-black outline-none"
+                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
                         value={simNumber}
                         onChange={(e) => setSimNumber(e.target.value)}
                       />
                       <span className="text-xs text-black/60">
-                        Enter the full number .
+                        Enter the full number.
                       </span>
                     </label>
 
-                    <button className="mt-6 w-full py-2 px-6 cursor-pointer bg-white text-black font-medium rounded-full hover:bg-[#111] hover:text-white transition-all">
-                      Activate SIM
-                    </button>
+                    <div>
+                      <button className="mt-6 inline-block py-2 px-10 text-sm bg-white text-black font-medium rounded-full hover:bg-black hover:text-white transition-all">
+                        Activate SIM
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {activeTab === "cancel" && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="p-5 bg-gray-100 rounded-2xl shadow">
-                  <label className="block text-base font-medium mb-2 text-black">
-                    Email Address
-                    <input
-                      type="email"
-                      placeholder="Enter email used for subscription"
-                      className="mt-2 w-full px-3 py-2 rounded-lg  border border-black/10 text-black outline-none"
-                    />
-                    <span className="text-xs text-black/60">
-                      We'll never share your email with anyone else.
-                    </span>
-                  </label>
+              {activeTab === "cancel" && (
+                <div className="relative max-w-4xl">
+                  <div
+                    style={{
+                      clipPath:
+                        "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
+                      borderRadius: "16px",
+                    }}
+                    className="p-5 bg-gray-100 rounded-2xl shadow flex flex-col w-full"
+                  >
+                    <label className="block text-base font-medium mb-2 text-black">
+                      Email Address
+                      <input
+                        type="email"
+                        placeholder="Enter email used for subscription"
+                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
+                      />
+                      <span className="text-xs text-black/60">
+                        We'll never share your email with anyone else.
+                      </span>
+                    </label>
 
-                  <label className="block text-base font-medium mt-4 text-black">
-                    SIM Card Number
-                    <input
-                      type="text"
-                      placeholder="Write your number"
-                      className="mt-2 w-full px-3 py-2 rounded-lg  border border-black/10 text-black outline-none"
-                    />
-                    <span className="text-xs text-black/60">
-                      Enter the full number .
-                    </span>
-                  </label>
+                    <label className="block text-base font-medium mt-4 text-black">
+                      SIM Card Number
+                      <input
+                        type="text"
+                        placeholder="Write your number"
+                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
+                      />
+                      <span className="text-xs text-black/60">
+                        Enter the full number.
+                      </span>
+                    </label>
 
-                  <button className="mt-6 w-full py-2 px-6 cursor-pointer bg-white text-black font-medium rounded-full hover:bg-[#111] hover:text-white transition-all">
-                    Cancel Subscription
-                  </button>
+                    <div>
+                      <button className="mt-6 inline-block py-2 px-6 bg-white text-black text-sm font-medium rounded-full hover:bg-black hover:text-white transition-all">
+                        Cancel Subscription
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </section>
         </div>
       )}
@@ -735,34 +750,38 @@ const Banner = () => {
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 max-h-48 overflow-y-auto text-sm text-black">
                   <ul className="list-disc list-inside space-y-2">
                     <li>
-                      All prices are subject to VAT at the current rate and you
-                      are subject to change
-                    </li>
-                    <li>Calls can be up to 30 seconds</li>
-                    <li>
-                      Charges are applied on a per second basis after the first
-                      30 seconds
+                      All prices are subject to VAT at the current rate and may
+                      be subject to change.
                     </li>
                     <li>
-                      A small amount of data is used for progressing other data
-                      roaming costs inc 5G on abandoned networks
-                    </li>
-                    <li>Calls to 5G are not included</li>
-                    <li>
-                      Outside the UK usage Plan for more information about our
-                      contract terms
+                      We cannot be held responsible for any GSM network issues,
+                      outages, or signal problems outside of our control.
                     </li>
                     <li>
-                      Calls outside the allocated allowance are charged at 0.01
-                      per calls
+                      We reserve the right to review and adjust your package
+                      every 30 days.
                     </li>
                     <li>
-                      Data outside the allocated allowance are charged at 0.01
-                      per calls
+                      You have the right to cancel the contract at any time by
+                      giving 30 days’ notice through our website.
                     </li>
                     <li>
-                      Data outside the allocated allowance are charged at 0.01
-                      per MB
+                      Lost, stolen, or damaged SIM cards may incur an additional
+                      replacement fee or additional usage fees. You agree that
+                      these costs are your responsibility.
+                    </li>
+                    <li>
+                      All SIMs must remain installed in the intercom and must
+                      not be used in any other device or for any other purpose.
+                    </li>
+                    <li>
+                      We have the right to increase prices in line with
+                      inflation and GSM network charges. Any changes will always
+                      be confirmed by email with more than 30 days’ notice.
+                    </li>
+                    <li>
+                      We reserve the right to bar or suspend your SIM card if
+                      any outstanding payments remain unpaid.
                     </li>
                   </ul>
                 </div>

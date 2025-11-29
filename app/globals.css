@@ -19,7 +19,7 @@ html {
 }
 
 .para {
-  @apply text-sm  xl:text-base font-medium text-black/80  text-shadow-2xs;
+  @apply text-sm  xl:text-base 2xl:text-lg font-medium text-black/70  text-shadow-2xs;
 }
 
 .btn__sytle {
