@@ -32,6 +32,18 @@ html {
   @apply text-red-500 hover:text-red-700 text-3xl cursor-pointer;
 }
 
+.ic__common__label {
+  @apply block text-base font-medium  text-black;
+}
+
+.ic__common__input {
+  @apply mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none;
+}
+
+.ic__common__msg {
+  @apply text-xs text-gray-500 mt-1;
+}
+
 /* page styles */
 /* home banner styles */
 
@@ -97,6 +109,16 @@ html {
 
 .ic__ac__header__parent {
   @apply flex justify-center md:text-center items-center gap-5  mb-8  w-full;
+}
+
+.ic__ac__tab__btn {
+  @apply px-4 py-2 font-medium text-base cursor-pointer;
+}
+.ic__ac__tab__active {
+  @apply border-b-2 border-black/80 text-black;
+}
+.ic__ac__form__wrapper {
+  @apply p-5 bg-gray-100 rounded-2xl shadow flex flex-col w-full;
 }
 
 /* footer styles here */

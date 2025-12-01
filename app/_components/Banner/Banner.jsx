@@ -325,9 +325,9 @@ const Banner = () => {
             {/* Tabs */}
             <div className="flex border-b border-black/20 mb-8">
               <button
-                className={`px-4 py-2 font-medium text-base cursor-pointer ${
+                className={`ic__ac__tab__btn ${
                   activeTab === "activate"
-                    ? "border-b-2 border-black/80 text-black"
+                    ? "ic__ac__tab__activek"
                     : "text-black/60"
                 }`}
                 onClick={() => setActiveTab("activate")}
@@ -335,9 +335,9 @@ const Banner = () => {
                 Activate SIM
               </button>
               <button
-                className={`px-4 py-2 font-medium text-base cursor-pointer ${
+                className={`ic__ac__tab__btn ${
                   activeTab === "cancel"
-                    ? "border-b-2 border-black/80 text-black"
+                    ? "ic__ac__tab__activek"
                     : "text-black/60"
                 }`}
                 onClick={() => setActiveTab("cancel")}
@@ -356,14 +356,14 @@ const Banner = () => {
                         "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
                       borderRadius: "16px",
                     }}
-                    className="p-5 bg-gray-100 rounded-2xl shadow flex flex-col w-full"
+                    className="ic__ac__form__wrapper"
                   >
-                    <label className="block text-base font-medium mb-2 text-black">
+                    <label className="ic__common__label">
                       Email Address
                       <input
                         type="email"
                         placeholder="Enter email used for subscription"
-                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
+                        className="ic__common__input"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -372,12 +372,12 @@ const Banner = () => {
                       </span>
                     </label>
 
-                    <label className="block text-base font-medium mt-4 text-black">
+                    <label className="ic__common__label">
                       SIM Card Number
                       <input
                         type="text"
                         placeholder="Write your number"
-                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
+                        className="ic__common__input"
                         value={simNumber}
                         onChange={(e) => setSimNumber(e.target.value)}
                       />
@@ -403,26 +403,26 @@ const Banner = () => {
                         "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
                       borderRadius: "16px",
                     }}
-                    className="p-5 bg-gray-100 rounded-2xl shadow flex flex-col w-full"
+                    className="ic__ac__form__wrapper"
                   >
-                    <label className="block text-base font-medium mb-2 text-black">
+                    <label className="ic__common__label">
                       Email Address
                       <input
                         type="email"
                         placeholder="Enter email used for subscription"
-                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
+                        className="ic__common__input"
                       />
                       <span className="text-xs text-black/60">
                         We'll never share your email with anyone else.
                       </span>
                     </label>
 
-                    <label className="block text-base font-medium mt-4 text-black">
+                    <label className="ic__common__label">
                       SIM Card Number
                       <input
                         type="text"
                         placeholder="Write your number"
-                        className="mt-2 w-full px-3 py-2 rounded-lg border border-black/10 text-black outline-none"
+                        className="ic__common__input"
                       />
                       <span className="text-xs text-black/60">
                         Enter the full number.
@@ -481,7 +481,7 @@ const Banner = () => {
           <main className="max-w-7xl mx-auto  border border-black/10 rounded-2xl  h-[80vh] overflow-y-scroll">
             <div className="bg-white backdrop-blur-sm rounded-lg shadow-md p-8">
               <div className="flex justify-between ">
-                <h1 className="text-3xl font-bold  text-black mb-8">
+                <h1 className="subTitle mb-8">
                   Pay-Monthly SIM Card Sign-Up Form
                 </h1>
                 <div onClick={() => setGateForm(false)}>
@@ -496,11 +496,9 @@ const Banner = () => {
                   value={formData.companyName}
                   onChange={handleInputChange}
                   placeholder="Company Name"
-                  className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                  className="ic__common__input"
                 />
-                <p className="text-xs text-gray-500 mt-1">
-                  0 of 250 max characters
-                </p>
+                <p className="ic__common__msg">0 of 250 max characters</p>
               </div>
 
               {/* YOUR DETAILS Section */}
@@ -511,7 +509,7 @@ const Banner = () => {
 
                 <div className="grid md:grid-cols-4 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -519,13 +517,13 @@ const Banner = () => {
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Company Name (If applicable)
                     </label>
                     <input
@@ -533,12 +531,12 @@ const Banner = () => {
                       name="companyNameApplicable"
                       value={formData.companyNameApplicable}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -546,17 +544,17 @@ const Banner = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="ic__common__msg">
                       Please note, we will send all correspondence to the email
                       address provided here
                     </p>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Contact Number <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -564,10 +562,10 @@ const Banner = () => {
                       name="contactNumber"
                       value={formData.contactNumber}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="ic__common__msg">
                       This is your contact number and not the telephone number
                       of the SIM
                     </p>
@@ -576,7 +574,7 @@ const Banner = () => {
 
                 {/* Address Section */}
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="ic__common__label">
                     Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -585,7 +583,7 @@ const Banner = () => {
                     value={formData.addressLine1}
                     onChange={handleInputChange}
                     placeholder="Address Line 1"
-                    className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none mb-3"
+                    className="ic__common__input mb-3"
                     required
                   />
                   <input
@@ -594,57 +592,51 @@ const Banner = () => {
                     value={formData.addressLine2}
                     onChange={handleInputChange}
                     placeholder="Address Line 2"
-                    className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none mb-3"
+                    className="ic__common__input mb-3"
                   />
                 </div>
 
                 <div className="grid md:grid-cols-4 gap-6 mb-6">
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
-                      Town/City
-                    </label>
+                    <label className="ic__common__label">Town/City</label>
                     <input
                       type="text"
                       name="townCity"
                       value={formData.townCity}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
-                      County
-                    </label>
+                    <label className="ic__common__label">County</label>
                     <input
                       type="text"
                       name="county"
                       value={formData.county}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
-                      Post Code
-                    </label>
+                    <label className="ic__common__label">Post Code</label>
                     <input
                       type="text"
                       name="postCode"
                       value={formData.postCode}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                     />
                   </div>
                   {/* <div>
-                <label className="block text-sm font-medium text-black mb-2">
+                <label className="ic__common__label">
                   Country
                 </label>
                 <select
                   name="country"
                   value={formData.country}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                  className="ic__common__input"
                 >
                   <option value="United Kingdom">United Kingdom</option>
                   <option value="Ireland">Ireland</option>
@@ -653,9 +645,7 @@ const Banner = () => {
               </div> */}
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
-                      Country
-                    </label>
+                    <label className="ic__common__label">Country</label>
                     <select
                       name="country"
                       value="United Kingdom"
@@ -669,7 +659,7 @@ const Banner = () => {
 
                 {/* SIM Cards Section */}
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="ic__common__label">
                     How many SIM cards do you require?{" "}
                     <span className="text-red-500">*</span>
                   </label>
@@ -681,7 +671,7 @@ const Banner = () => {
                     placeholder="Please enter a number from 1 to 20"
                     min="1"
                     max="20"
-                    className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                    className="ic__common__input"
                     required
                   />
                 </div>
@@ -734,23 +724,30 @@ const Banner = () => {
                 <h2 className="text-xl font-bold text-black mb-6">
                   CONTRACT TERMS
                 </h2>
+
+                {/* Single Checkbox */}
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-black mb-2">
-                    Terms of Contract <span className="text-red-500">*</span>
+                  <label className="flex items-center gap-2 text-black text-sm cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="contractAgree"
+                      checked={formData.contractAgree}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          contractAgree: e.target.checked,
+                        })
+                      }
+                      required
+                    />
+                    <span>
+                      I agree to the contract terms{" "}
+                      <span className="text-red-500">*</span>
+                    </span>
                   </label>
-                  <select
-                    name="contractTerms"
-                    value={formData.contractTerms}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
-                    required
-                  >
-                    <option value="">I agree</option>
-                    <option value="12months">12 Months</option>
-                    <option value="24months">24 Months</option>
-                    <option value="36months">36 Months</option>
-                  </select>
                 </div>
+
+                {/* Contract Terms List */}
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 max-h-48 overflow-y-auto text-sm text-black">
                   <ul className="list-disc list-inside space-y-2">
                     <li>
@@ -785,7 +782,7 @@ const Banner = () => {
                     </li>
                     <li>
                       We reserve the right to bar or suspend your SIM card if
-                      any outstanding payments remain unpaid.
+                      any outstanding payments remain unpaid.
                     </li>
                   </ul>
                 </div>
@@ -799,7 +796,7 @@ const Banner = () => {
 
                 <div className="grid md:grid-cols-4 gap-6 mb-6">
                   <div className="mb-6">
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Name(s) of Account Holder(s){" "}
                       <span className="text-red-500">*</span>
                     </label>
@@ -808,18 +805,16 @@ const Banner = () => {
                       name="accountHolder"
                       value={formData.accountHolder}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
-                      0 of 250 max characters
-                    </p>
+                    <p className="ic__common__msg">0 of 250 max characters</p>
                     <p className="text-xs text-gray-600 mt-1">
                       As it appears on the account
                     </p>
                   </div>
                   <div className="mb-6">
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Bank Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -827,15 +822,13 @@ const Banner = () => {
                       name="bankName"
                       value={formData.bankName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
-                      0 of 250 max characters
-                    </p>
+                    <p className="ic__common__msg">0 of 250 max characters</p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Sort Code <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -844,16 +837,14 @@ const Banner = () => {
                       value={formData.sortCode}
                       onChange={handleInputChange}
                       placeholder="00-00-00"
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
-                      0 of 6 max characters
-                    </p>
+                    <p className="ic__common__msg">0 of 6 max characters</p>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Account Number <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -861,17 +852,15 @@ const Banner = () => {
                       name="accountNumber"
                       value={formData.accountNumber}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
-                      0 of 8 max characters
-                    </p>
+                    <p className="ic__common__msg">0 of 8 max characters</p>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="ic__common__label">
                     Bank or Building Society Address{" "}
                     <span className="text-red-500">*</span>
                   </label>
@@ -881,7 +870,7 @@ const Banner = () => {
                     value={formData.bankAddressLine1}
                     onChange={handleInputChange}
                     placeholder="Address Line 1"
-                    className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none mb-3"
+                    className="ic__common__input mb-3"
                     required
                   />
                   <input
@@ -890,7 +879,7 @@ const Banner = () => {
                     value={formData.bankAddressLine2}
                     onChange={handleInputChange}
                     placeholder="Address Line 2"
-                    className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none mb-3"
+                    className="ic__common__input mb-3"
                   />
                   <div className="grid md:grid-cols-4 gap-3">
                     <input
@@ -913,7 +902,7 @@ const Banner = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-5">
                   <div className="mb-6">
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Your Reference <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -921,19 +910,17 @@ const Banner = () => {
                       name="reference"
                       value={formData.reference}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
-                    <p className="text-xs text-gray-500 mt-1">
-                      0 of 250 max characters
-                    </p>
+                    <p className="ic__common__msg">0 of 250 max characters</p>
                     <p className="text-xs text-gray-600 mt-1">
                       This will be shown on your invoice
                     </p>
                   </div>
 
                   <div className="">
-                    <label className="block text-sm font-medium text-black mb-2">
+                    <label className="ic__common__label">
                       Date <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -945,7 +932,7 @@ const Banner = () => {
                           signatureDate: e.target.value,
                         })
                       }
-                      className="w-full px-4 py-3 text-black border border-gray-300 rounded-lg outline-none"
+                      className="ic__common__input"
                       required
                     />
                   </div>
