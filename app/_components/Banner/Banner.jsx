@@ -157,7 +157,7 @@ const Banner = () => {
                 {/* Close Button */}
                 <button
                   onClick={() => seIntercom(false)}
-                  className=" hover:text-red-700 text-red-500 text-3xl cursor-pointer"
+                  className=" ic__common__close"
                 >
                   <IoMdClose />
                 </button>
@@ -296,9 +296,9 @@ const Banner = () => {
           className="fixed inset-0 flex items-center justify-center bg-white/90 z-50 px-4"
           id="intercom"
         >
-          <section className="w-full max-w-5xl bg-white rounded-2xl shadow-lg p-6 sm:p-10 xl:p-20 flex flex-col items-center justify-center relative">
+          <section className="ic__ac__parent relative">
             {/* Header */}
-            <div className="flex justify-center md:text-center items-center gap-5  mb-8 relative w-full">
+            <div className="ic__ac__header__parent relative">
               <div>
                 <h2 className="subTitle ">
                   {activeTab === "activate"
@@ -312,10 +312,10 @@ const Banner = () => {
                 </p>
               </div>
 
-              <div className="block md:absolute top-4 right-4" >
+              <div className="block md:absolute top-4 right-4">
                 <button
                   onClick={() => setActiveCancel(false)}
-                  className=" text-red-500 hover:text-red-700 text-3xl cursor-pointer"
+                  className="ic__common__close"
                 >
                   <IoMdClose />
                 </button>
@@ -449,9 +449,9 @@ const Banner = () => {
             {/* Close Button */}
             <button
               onClick={() => setWorks(false)}
-              className="absolute top-3 right-3 hover:text-red-700  text-red-500 text-3xl cursor-pointer"
+              className="absolute top-3 right-3 "
             >
-              ×
+              <IoMdClose className="ic__common__close" />
             </button>
 
             <div>
@@ -485,7 +485,7 @@ const Banner = () => {
                   Pay-Monthly SIM Card Sign-Up Form
                 </h1>
                 <div onClick={() => setGateForm(false)}>
-                  <IoMdClose className="text-red-500 text-4xl cursor-pointer"></IoMdClose>
+                  <IoMdClose className="ic__common__close"></IoMdClose>
                 </div>
               </div>
               {/* Company Name */}
