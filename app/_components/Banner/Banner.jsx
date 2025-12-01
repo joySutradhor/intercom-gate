@@ -298,24 +298,28 @@ const Banner = () => {
         >
           <section className="w-full max-w-5xl bg-white rounded-2xl shadow-lg p-6 sm:p-10 xl:p-20 flex flex-col items-center justify-center relative">
             {/* Header */}
-            <div className="flex flex-col items-center text-center mb-8 relative w-full">
-              <h2 className="subTitle">
-                {activeTab === "activate"
-                  ? "Activate Your GateSIM"
-                  : "Cancel Your Subscription"}
-              </h2>
-              <p className="text-black/80 mt-2">
-                {activeTab === "activate"
-                  ? "Great! You received your GateSIM. Activate it here."
-                  : "Cancel your subscription anytime. Enter your details below."}
-              </p>
+            <div className="flex justify-center md:text-center items-center gap-5  mb-8 relative w-full">
+              <div>
+                <h2 className="subTitle ">
+                  {activeTab === "activate"
+                    ? "Activate Your GateSIM"
+                    : "Cancel Your Subscription"}
+                </h2>
+                <p className="text-black/80 mt-2">
+                  {activeTab === "activate"
+                    ? "Great! You received your GateSIM. Activate it here."
+                    : "Cancel your subscription anytime. Enter your details below."}
+                </p>
+              </div>
 
-              <button
-                onClick={() => setActiveCancel(false)}
-                className="absolute top-4 right-4 text-red-500 hover:text-red-700 text-3xl cursor-pointer"
-              >
-                <IoMdClose />
-              </button>
+              <div className="block md:absolute top-4 right-4" >
+                <button
+                  onClick={() => setActiveCancel(false)}
+                  className=" text-red-500 hover:text-red-700 text-3xl cursor-pointer"
+                >
+                  <IoMdClose />
+                </button>
+              </div>
             </div>
 
             {/* Tabs */}
