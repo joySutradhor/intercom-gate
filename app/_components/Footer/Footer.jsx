@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="ic__h__footer__wrapper ">
           <div className="ic__h__footer__email para">
             <MdEmail size={20} />
-            <span>info@gatesim.com</span>
+            <span>info@intercomsimcards.co.uk</span>
           </div>
 
           <div className="ic__h__icon__wrapper">
