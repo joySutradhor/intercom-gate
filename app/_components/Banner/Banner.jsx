@@ -94,7 +94,7 @@ const Banner = () => {
         {/* content parent */}
         <div className="ic__h__parent    ">
           <div className=" ic__h__child__parent">
-            <h2 className="title "> 4G & GSM Intercom SIM Cards</h2>
+            <h2 className="title ">GSM Intercom SIM Cards</h2>
             <div className="ic__h__para__wrapper para">
               <p>
                 Welcome to Intercom SIM Cards , the easy and affordable way to
@@ -117,7 +117,7 @@ const Banner = () => {
               </button>
 
               <button onClick={() => seIntercom(true)} className="btn__sytle">
-                Get Intercom Sim
+                Sim Cards
                 <span>
                   {" "}
                   <MdOutlineArrowOutward />{" "}
