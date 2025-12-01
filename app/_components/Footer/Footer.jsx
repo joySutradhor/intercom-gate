@@ -1,6 +1,8 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { IoLogoYoutube } from "react-icons/io";
+
 
 const Footer = () => {
   return (
@@ -17,11 +19,11 @@ const Footer = () => {
               <FaFacebookF size={20} />
             </a>
             <a href="#" className="ic__h__footer__icon">
-              <FaInstagram size={20} />
+              <IoLogoYoutube size={20} />
             </a>
-            <a href="#" className="ic__h__footer__icon">
+            {/* <a href="#" className="ic__h__footer__icon">
               <FaLinkedinIn size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
