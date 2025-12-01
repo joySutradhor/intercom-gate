@@ -101,7 +101,7 @@ html {
 }
 
 .ic__h__footer__icon {
-  @apply hover:text-black-800;
+  @apply hover:text-black;
 }
 
 /* ===================================================================== */

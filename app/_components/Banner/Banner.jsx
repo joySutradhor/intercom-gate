@@ -440,7 +440,7 @@ const Banner = () => {
 
       {/* works modal  */}
       {works && (
-        <div className="fixed inset-0 bg-white/90   flex items-center justify-center z-50 lR__gap ">
+        <div className="fixed inset-0 bg-white  flex items-center justify-center z-50 lR__gap ">
           <div className="ic__w__parent__wrapper relative">
             {/* Close Button */}
             <button
