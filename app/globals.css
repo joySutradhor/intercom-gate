@@ -59,7 +59,7 @@ html {
 }
 
 .ic__h__para__wrapper {
-  @apply max-w-2xl space-y-2 pt-5  pb-10;
+  @apply  space-y-2 pt-5  pb-10 max-w-2xl;
 }
 
 .ic__h__btns__parent {

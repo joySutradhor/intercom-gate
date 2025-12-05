@@ -7,6 +7,7 @@ import logo from "@/public/logo.png";
 import { IoMdClose } from "react-icons/io";
 import Footer from "../Footer/Footer";
 import WorksModalContent from "../WorksModalContent/WorksModalContent";
+import Link from "next/link";
 
 const Banner = () => {
   const [works, setWorks] = useState(false);
@@ -93,12 +94,11 @@ const Banner = () => {
 
         {/* content parent */}
         <div className="ic__h__parent    ">
-          <div className=" ic__h__child__parent">
+          <div className=" ic__h__child__parent ">
             <h2 className="title ">GSM Intercom SIM Cards</h2>
             <div className="ic__h__para__wrapper para">
               <p>
-                Welcome to Intercom SIM Cards , the easy and affordable way to
-                keep your intercom or gate entry system connected.
+                Welcome to Intercom SIM Cards , the easy and affordable way to keep your intercom or gate entry system connected.
               </p>
               <p>
                 Intercom SIM Cards Simple, Reliable & Low-Cost Perfect for Gate
@@ -133,6 +133,15 @@ const Banner = () => {
                   <MdOutlineArrowOutward />{" "}
                 </span>
               </button>
+              <Link href="/support">
+                <button className="btn__sytle">
+                  Customer Support
+                  <span>
+                    {" "}
+                    <MdOutlineArrowOutward />{" "}
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

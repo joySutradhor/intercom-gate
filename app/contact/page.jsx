@@ -4,47 +4,16 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import logo from "@/public/logo.png";
 
-// ICONS
-import { MdSupportAgent } from "react-icons/md";
-import { IoIosSettings } from "react-icons/io";
-import { FaSimCard } from "react-icons/fa";
-import { BsSend } from "react-icons/bs";
 
 // Components
 import WorksModalContent from "../_components/WorksModalContent/WorksModalContent";
 import SimsCards from "../_components/SimsCards/SimsCards";
 
-// AI Chat
-import { useChat } from "@ai-sdk/react";
+
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState("support");
-
-  const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
-    useChat({
-      api: "/api/gemini",
-    });
-
-    console.log(messages , "check message" , input, handleInputChange )
-
-  const scrollRef = useRef(null);
-
-  // Auto-scroll messages
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [messages]);
-
-  const tabs = [
-    {
-      id: "support",
-      label: "Customer Support",
-      icon: <MdSupportAgent size={22} />,
-    },
-    { id: "how", label: "How It Works", icon: <IoIosSettings size={22} /> },
-    { id: "sims", label: "SIM Cards", icon: <FaSimCard size={22} /> },
-  ];
+  
 
   return (
     <div className="max__width py-6">
@@ -88,76 +57,8 @@ const Page = () => {
         {/* RIGHT CONTENT */}
         <div className="md:col-span-3 bg-white p-6 rounded-xl border border-black/10 hover:shadow-sm min-h-[50vh] max-h-[60vh] flex flex-col">
           {activeTab === "support" && (
-            <div className="flex flex-col h-full">
-              {/* Header */}
-              <div className="sticky top-0 bg-white z-10 mb-2">
-                <h2 className="text-xl font-semibold">Customer Support</h2>
-              </div>
-
-              {/* Messages */}
-              <div
-                className="flex-1 overflow-y-auto space-y-3 p-2 bg-gray-50 rounded-lg"
-                ref={scrollRef}
-              >
-                {messages.length === 0 && (
-                  <p className="text-center text-black/50">
-                    Ask anything about our SIM services.
-                  </p>
-                )}
-                {messages.map((msg, index) => (
-                  <div
-                    key={index}
-                    className={`flex ${
-                      msg.role === "user" ? "justify-end" : "justify-start"
-                    }`}
-                  >
-                    <div
-                      className={`px-4 py-2 rounded-xl max-w-[80%] text-sm ${
-                        msg.role === "user"
-                          ? "bg-blue-600 text-white"
-                          : "bg-gray-200 text-black"
-                      }`}
-                    >
-                      {msg.content}
-                    </div>
-                  </div>
-                ))}
-
-                {isLoading && (
-                  <div className="flex justify-start">
-                    <div className="px-4 py-2 rounded-xl bg-gray-200 text-black text-sm">
-                      Typing...
-                    </div>
-                  </div>
-                )}
-
-                {error && (
-                  <p className="text-red-500 text-sm">
-                    Something went wrong. Try again.
-                  </p>
-                )}
-              </div>
-
-              {/* Input */}
-              <form
-                onSubmit={handleSubmit}
-                className="flex items-center gap-2 mt-2 sticky bottom-0 bg-white pt-2"
-              >
-                <input
-                  type="text"
-                  value={input}
-                  onChange={handleInputChange}
-                  placeholder="Ask anything about our SIM services..."
-                  className="flex-1 border border-black/10 rounded-lg px-4 py-2 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="flex items-center gap-2 px-4 py-2 bg-[#222] text-white rounded-lg"
-                >
-                  Send <BsSend size={18} />
-                </button>
-              </form>
+            <div className="max-w-md mx-auto mt-10 flex flex-col h-[500px] border rounded-lg shadow-lg">
+             hello 
             </div>
           )}
 
