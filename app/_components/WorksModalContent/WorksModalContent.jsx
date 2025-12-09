@@ -61,13 +61,13 @@ const WorksModalContent = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="xl:flex justify-center items-center h-screen overflow-y-auto ">
       <div className=" ">
-        <div className="max-w-7xl mx-auto p-10 bg-white/80 rounded-2xl">
+        <div className="max-w-7xl mx-auto p-5 xl:p-10 bg-white/80 xl:rounded-2xl ">
           {/* Header */}
-          <div className="flex justify-between ">
-            <div className="mb-10 border-b pb-3 border-black/10 max-w-4xl">
-              <h2 className="subTitle">
+          <div className="xl:flex justify-between mb-10 ">
+            <div className=" border-b pb-3 border-black/10 max-w-4xl">
+              <h2 className="subTitle ">
                 How It Works – Fast, Secure & Built Around Your Needs
               </h2>
               <p className="para py-2">
@@ -81,7 +81,7 @@ const WorksModalContent = () => {
                 informed in advance.
               </p>
             </div>
-            <div>
+            <div className="mt-5 xl:mt-0">
               <Link href="/">
                 <button className="btn__sytle">
                   Back to Home
@@ -105,7 +105,7 @@ const WorksModalContent = () => {
           </div>
 
           {/* TAB Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* LEFT SIDE – TABS */}
             <div className="space-y-2">
               {steps.map((step, index) => (
@@ -129,7 +129,7 @@ const WorksModalContent = () => {
 
             {/* RIGHT SIDE – CONTENT */}
             <div className="md:col-span-2 bg-white  rounded-lg p-6 ">
-              <h3 className="font-bold text-3xl mb-4">
+              <h3 className="font-bold text-2xl xl:text-3xl mb-4">
                 {steps[activeStep].title}
               </h3>
 
