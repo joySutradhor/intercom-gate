@@ -98,7 +98,8 @@ const Banner = () => {
             <h2 className="title ">GSM Intercom SIM Cards</h2>
             <div className="ic__h__para__wrapper para">
               <p>
-                Welcome to Intercom SIM Cards , the easy and affordable way to keep your intercom or gate entry system connected.
+                Welcome to Intercom SIM Cards , the easy and affordable way to
+                keep your intercom or gate entry system connected.
               </p>
               <p>
                 Intercom SIM Cards Simple, Reliable & Low-Cost Perfect for Gate
@@ -108,13 +109,15 @@ const Banner = () => {
 
             {/* btn group parent */}
             <div className="ic__h__btns__parent ">
-              <button onClick={() => handleWorks()} className="btn__sytle">
-                How Its Works{" "}
-                <span>
-                  {" "}
-                  <MdOutlineArrowOutward />{" "}
-                </span>
-              </button>
+              <Link href="/how-works">
+                <button className="btn__sytle">
+                  How Its Works{" "}
+                  <span>
+                    {" "}
+                    <MdOutlineArrowOutward />{" "}
+                  </span>
+                </button>
+              </Link>
 
               <button onClick={() => seIntercom(true)} className="btn__sytle">
                 Sim Cards
@@ -453,13 +456,10 @@ const Banner = () => {
 
       {/* works modal  */}
       {works && (
-        <div className="fixed inset-0 bg-white  flex items-center justify-center z-50 lR__gap ">
-          <div className="ic__w__parent__wrapper relative">
+        <div className="fixed inset-0 bg-white/10  flex items-center justify-center z-50 lR__gap ">
+          <div className="ic__w__parent__wrapper relative bg-white">
             {/* Close Button */}
-            <button
-              onClick={() => setWorks(false)}
-              className="absolute top-3 right-3 "
-            >
+            <button className="absolute top-3 right-3 ">
               <IoMdClose className="ic__common__close" />
             </button>
 

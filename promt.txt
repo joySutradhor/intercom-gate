@@ -1,0 +1,41 @@
+import Anthropic from '@anthropic-ai/sdk';
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+const systemPrompt = `You are the customer support assistant for **Intercom SIM Cards (IntercomSIM)**...
+// [Your full prompt here]
+`;
+
+export async function POST(req) {
+  try {
+    const { message } = await req.json();
+    
+    const response = await anthropic.messages.create({
+      model: 'claude-3-5-sonnet-20241022',
+      max_tokens: 1024,
+      messages: [
+        {
+          role: 'user',
+          content: `${systemPrompt}\n\nUser message: ${message}`
+        }
+      ]
+    });
+    
+    return Response.json({ 
+      reply: response.content[0].text 
+    });
+    
+  } catch (error) {
+    console.error('Claude API error:', error);
+    return Response.json({ 
+      error: 'Failed to generate response' 
+    }, { status: 500 });
+  }
+}
+```
+
+### **Step 4: Add to `.env.local`**
+```
+ANTHROPIC_API_KEY=sk-ant-your-key-here
