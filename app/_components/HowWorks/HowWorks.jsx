@@ -69,7 +69,7 @@ const HowWorks = () => {
                     icon={BsSim}
                   />
                 </div>
-                <h2 className="subTitle mb-2">30-Day Rolling Contract </h2>
+                <h2 className="subTitle mb-2">30-Day Rollings  Contract </h2>
                 <p>
                   All SIMs operate on a 30-day rolling contract, giving you
                   flexibility with no long-term commitment.
