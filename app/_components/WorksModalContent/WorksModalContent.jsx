@@ -5,6 +5,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const WorksModalContent = () => {
   const [activeStep, setActiveStep] = useState(0);
+  // https://i.pinimg.com/1200x/76/fa/60/76fa600426812ba07bb83a9fcc832194.jpg
 
   const steps = [
     {
@@ -68,7 +69,7 @@ const WorksModalContent = () => {
           <div className="xl:flex justify-between mb-10 ">
             <div className=" border-b pb-3 border-black/10 max-w-4xl">
               <h2 className="subTitle ">
-                How It Works – Fast, Secure & Built Around Your Needs
+                How It Works Fast, Secure & Built Around Your Needs
               </h2>
               <p className="para py-2">
                 Once your SIM is installed, we allow a 3-month usage period,
