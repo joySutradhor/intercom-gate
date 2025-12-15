@@ -26,7 +26,7 @@ const HowWorks = () => {
             </p>
             <p className="">
               If any changes are required, you will always be informed in
-              advance.
+              advance. Thanks .
             </p>
           </div>
           <div className="flex gap-x-5 items-center">
