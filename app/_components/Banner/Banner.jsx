@@ -26,7 +26,7 @@ const Banner = () => {
         {/* content parent */}
         <div className="ic__h__parent  ">
           <div className="  ">
-            <div className="flex gap-10 mb-10   justify-center">
+            <div className="flex gap-10 mb-10  bg-white/80 rounded-2xl py-4 justify-center">
               <div>
                 <Link href="/all-sims-cards">
                   <button className="flex items-center gap-2 cursor-pointer bg-[#111] text-white hover:bg-white  py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-shadow-2xs hover:text-black ">
