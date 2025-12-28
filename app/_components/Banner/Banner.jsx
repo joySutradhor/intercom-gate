@@ -26,11 +26,11 @@ const Banner = () => {
         {/* content parent */}
         <div className="ic__h__parent  ">
           <div className="  ">
-            <div className="flex gap-10 mb-10 bg-white/80 rounded-2xl py-5  justify-center">
+            <div className="flex gap-10 mb-10   justify-center">
               <div>
                 <Link href="/all-sims-cards">
                   <button className="flex items-center gap-2 cursor-pointer bg-[#111] text-white hover:bg-white  py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-shadow-2xs hover:text-black ">
-                    Check packages & prices
+                    Pricing
                     <BsArrowUpRight className="w-4 h-4" />
                   </button>
                 </Link>
@@ -102,7 +102,7 @@ const Banner = () => {
             </div>
             <div className=" mt-10">
               <div>
-                <ul className="text-base font-bold text-black/80 space-y-2 list-disc list-inside flex gap-3 bg-white/80 rounded-2xl py-3 px-5  justify-center">
+                <ul className="text-lg font-bold text-black/80  list-disc list-inside flex gap-3 bg-white/80 rounded-2xl px-5 py-3  justify-center">
                   <li>Designed for gate intercoms / door entry</li>
                   <li>Activate online (safe delivery)</li>
                   <li>UK support</li>
