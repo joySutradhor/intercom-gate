@@ -10,11 +10,11 @@ const WorksModalContent = () => {
   const steps = [
     {
       id: 1,
-      title: "Order Your SIM – Secure Delivery",
+      title: "Order SIM (delivered inactive)",
       points: [
-        "Place your order on our website.",
-        "Your SIM arrives by post, but it only activates when YOU confirm online.",
-        "This protects you if it’s delayed or goes missing during delivery.",
+        "Order your intercom SIM online in just a few minutes.",
+        "We deliver the SIM by post in an inactive state, so it cannot be used until you approve it.",
+        "Activate the SIM online only when you are ready, ensuring security and peace of mind during delivery.",
       ],
     },
     {
@@ -25,38 +25,23 @@ const WorksModalContent = () => {
         "No complicated setup — your intercom works exactly as it should.",
       ],
     },
+
     {
       id: 3,
-      title: "Months of Smart Usage Monitoring",
+      title: "Activate online",
       points: [
-        "For the first three months, your SIM runs at the agreed rate.",
-        "This allows us to collect real usage data — not estimates.",
+        "Visit our website and click the “Activate SIM” button.",
+        "Fill in the activation form with your phone number and email address.",
+        "Our team activates your SIM online and notifies you once it’s live.",
       ],
     },
+
     {
       id: 4,
-      title: "We Place You on the Best Package Automatically",
+      title: "It works — we monitor and place you on the best package",
       points: [
-        "After the assessment period, we review your usage.",
-        "If you're already on the right plan, nothing changes.",
-        "If we can save you money — we will.",
-      ],
-    },
-    {
-      id: 5,
-      title: "Total Transparency",
-      points: [
-        "You’ll always be notified before any package changes.",
-        "No surprises. No hidden fees. Just a plan tailored to your intercom system.",
-      ],
-    },
-    {
-      id: 6,
-      title: "Your Usage Review (Existing Content)",
-      points: [
-        "Once your SIM is installed, we allow a 3-month usage period, charged at the rate stated.",
-        "This helps calculate your average consumption and ensures you get the most suitable package.",
-        "If any changes are required, you will always be informed in advance.",
+        "Your SIM works normally while we monitor real usage in the background.",
+        "After the initial period, we review your data and move you to the most cost-effective package.",
       ],
     },
   ];
@@ -72,15 +57,19 @@ const WorksModalContent = () => {
                 How It Works Fast, Secure & Built Around Your Needs
               </h2>
               <p className="para py-2">
-                Once your SIM is installed, we allow a 3-month usage period,
-                charged at the rate stated. This gives us enough data to
-                calculate your average consumption and ensure you are on the
-                most suitable package.
+                Once your SIM is installed and activated, it runs on your chosen
+                package for an initial 3-month period.
               </p>
               <p className="para">
-                If any changes to your package are required, you will always be
-                informed in advance.
+                We monitor usage to ensure you’re on the most suitable and
+                cost-effective plan. If any changes are needed, we’ll always
+                contact you first.
               </p>
+              <ul className="text-xl font-medium list-inside list-decimal mt-5 flex gap-3 justify-center">
+                <li>Simple</li>
+                <li>Transparent</li>
+                <li>No Hidden Costs</li>
+              </ul>
             </div>
             <div className="mt-5 xl:mt-0">
               <Link href="/">
