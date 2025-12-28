@@ -1,11 +1,10 @@
-import React from "react";
-import WorksModalContent from "../_components/WorksModalContent/WorksModalContent";
+
+import ActiveCancelSim from "../_components/ActiveCancelSim/ActiveCancelSim";
 
 const Page = () => {
   return (
     <div>
       <div className="relative w-full h-screen overflow-hidden">
-        {/* BACKGROUND VIDEO */}
         <video
           src="/intercom-video.mp4"
           autoPlay
@@ -17,7 +16,7 @@ const Page = () => {
         <div className="absolute inset-0 bg-black/60"></div>
         {/* CONTENT */}
         <div className="relative z-50">
-          <WorksModalContent />
+          <ActiveCancelSim />
         </div>
       </div>
     </div>

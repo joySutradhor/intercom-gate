@@ -1,5 +1,5 @@
-import React from "react";
-import WorksModalContent from "../_components/WorksModalContent/WorksModalContent";
+
+import SimsCards from "../_components/SimsCards/SimsCards";
 
 const Page = () => {
   return (
@@ -17,7 +17,7 @@ const Page = () => {
         <div className="absolute inset-0 bg-black/60"></div>
         {/* CONTENT */}
         <div className="relative z-50">
-          <WorksModalContent />
+          <SimsCards />
         </div>
       </div>
     </div>

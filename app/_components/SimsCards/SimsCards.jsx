@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsArrowUpRight } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
@@ -5,9 +6,9 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const SimsCards = () => {
   return (
-    <div>
-      <div >
-        <div className="flex justify-between pb-10 ">
+    <div className="h-screen flex justify-center items-center">
+      <div className="max-w-7xl mx-auto p-5 xl:p-10 bg-white xl:rounded-2xl ">
+        <div className="flex justify-between pb-10 gap-10 ">
           <div>
             <h2 className="subTitle mb-2">30-Day Rolling Contract </h2>
             <p className="para">
@@ -16,7 +17,17 @@ const SimsCards = () => {
             </p>
           </div>
 
-         
+          <div>
+            <Link href="/">
+              <button className="btn__sytle">
+                Back to Home
+                <span>
+                  {" "}
+                  <MdOutlineArrowOutward />{" "}
+                </span>
+              </button>
+            </Link>
+          </div>
         </div>
 
         <div className="ic__i__card__container">
@@ -44,10 +55,12 @@ const SimsCards = () => {
               </div>
 
               <div className="mt-8">
-                <button className="btn__sytle">
-                  Sign Up
-                  <BsArrowUpRight className="w-4 h-4" />
-                </button>
+                <Link href="/sim-submit-form">
+                  <button className="btn__sytle">
+                    Sign Up
+                    <BsArrowUpRight className="w-4 h-4" />
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -75,13 +88,12 @@ const SimsCards = () => {
               </div>
 
               <div className="mt-8">
-                <button className="btn__sytle">
-                  Sign Up
-                  <span>
-                    {" "}
-                    <MdOutlineArrowOutward />{" "}
-                  </span>
-                </button>
+                <Link href="/sim-submit-form">
+                  <button className="btn__sytle">
+                    Sign Up
+                    <BsArrowUpRight className="w-4 h-4" />
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -118,13 +130,12 @@ const SimsCards = () => {
                 </div>
 
                 <div className="mt-8">
-                  <button className="btn__sytle">
-                    Sign Up
-                    <span>
-                      {" "}
-                      <MdOutlineArrowOutward />{" "}
-                    </span>
-                  </button>
+                  <Link href="/sim-submit-form">
+                    <button className="btn__sytle">
+                      Sign Up
+                      <BsArrowUpRight className="w-4 h-4" />
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
