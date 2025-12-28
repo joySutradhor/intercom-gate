@@ -51,7 +51,7 @@ html {
   @apply w-[25vw] md:w-[15vw] xl:w-[10vw] h-full;
 }
 .ic__h__parent {
-  @apply flex justify-between items-center h-full relative  ;
+  @apply flex justify-center items-center h-full relative max-w-7xl mx-auto  ;
 }
 
 .ic__h__child__parent {
