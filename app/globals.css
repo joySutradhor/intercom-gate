@@ -55,7 +55,7 @@ html {
 }
 
 .ic__h__child__parent {
-  @apply bg-white px-5 py-10 xl:px-10 xl:py-10 rounded-3xl z-50 shadow;
+  @apply bg-white/80 px-5 py-10 xl:px-10 xl:py-10 rounded-3xl z-50 shadow;
 }
 
 .ic__h__para__wrapper {
