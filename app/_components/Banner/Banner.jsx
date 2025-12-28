@@ -3,6 +3,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import logo from "@/public/logo.png";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const Banner = () => {
   return (
@@ -77,6 +78,33 @@ const Banner = () => {
                   </span>
                 </button>
               </Link>
+            </div>
+          </div>
+          <div className="ic__h__child__parent space-y-5">
+            <div>
+              <Link href="/all-sims-cards">
+                <button className="flex items-center gap-2 cursor-pointer bg-[#111] text-white hover:bg-white  py-2 px-8 rounded-full text-sm font-medium border border-black/5  shadow ease-in-out duration-500  text-shadow-2xs hover:text-black ">
+                  Check packages & prices
+                  <BsArrowUpRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
+
+            <div>
+              <Link href="/sim-submit-form">
+                <button className="btn__sytle">
+                  Order a SIM
+                  <BsArrowUpRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
+            
+            <div>
+              <ul className="text-base font-medium space-y-2 list-disc list-inside">
+                <li>Designed for gate intercoms / door entry</li>
+                <li>Activate online (safe delivery)</li>
+                <li>UK support</li>
+              </ul>
             </div>
           </div>
         </div>
