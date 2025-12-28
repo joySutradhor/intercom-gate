@@ -498,7 +498,7 @@ const Banner = () => {
                 </div>
               </div>
               {/* Company Name */}
-              <div className="mb-8">
+              {/* <div className="mb-8">
                 <input
                   type="text"
                   name="companyName"
@@ -508,7 +508,7 @@ const Banner = () => {
                   className="ic__common__input"
                 />
                 <p className="ic__common__msg">0 of 250 max characters</p>
-              </div>
+              </div> */}
 
               {/* YOUR DETAILS Section */}
               <div className="mb-8">
@@ -798,7 +798,7 @@ const Banner = () => {
               </div>
 
               {/* DIRECT DEBIT DETAILS Section */}
-              <div className="mb-8">
+              {/* <div className="mb-8">
                 <h2 className="text-xl font-bold text-black mb-6">
                   DIRECT DEBIT DETAILS
                 </h2>
@@ -946,7 +946,7 @@ const Banner = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Submit Button */}
               <div className="flex">
