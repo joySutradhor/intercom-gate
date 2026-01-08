@@ -108,7 +108,7 @@ const ActiveCancelSim = () => {
                   </label>
 
                   <div>
-                    <button className="mt-6 inline-block py-2 px-10 text-sm bg-white text-black font-medium rounded-full hover:bg-black hover:text-white transition-all">
+                    <button className="cursor-pointer mt-6 inline-block py-2 px-10 text-sm bg-white text-black font-medium rounded-full hover:bg-black hover:text-white transition-all">
                       Activate SIM
                     </button>
                   </div>
@@ -151,7 +151,7 @@ const ActiveCancelSim = () => {
                   </label>
 
                   <div>
-                    <button className="mt-6 inline-block py-2 px-6 bg-white text-black text-sm font-medium rounded-full hover:bg-black hover:text-white transition-all">
+                    <button className="cursor-pointer mt-6 inline-block py-2 px-6 bg-white text-black text-sm font-medium rounded-full hover:bg-black hover:text-white transition-all">
                       Cancel Subscription
                     </button>
                   </div>

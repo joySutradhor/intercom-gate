@@ -299,7 +299,7 @@ const SubmitForm = () => {
             <div className="flex">
               <button
                 onClick={handleSubmit}
-                className="bg-[#111] text-white hover:bg-white hover:text-white font-semibold px-8 cursor-pointer py-2 rounded-full text-base transition-colors duration-200 border border-black/10"
+                className="bg-[#111] text-white hover:bg-[#111] hover:text-white font-semibold px-8 cursor-pointer py-2 rounded-full text-base transition-colors duration-200 border border-black/10"
               >
                 Submit
               </button>

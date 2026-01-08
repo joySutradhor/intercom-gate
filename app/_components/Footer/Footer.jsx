@@ -2,6 +2,10 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLogoYoutube } from "react-icons/io";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa";
+
+
 
 
 const Footer = () => {
@@ -15,15 +19,22 @@ const Footer = () => {
           </div>
 
           <div className="ic__h__icon__wrapper">
-            <a href="#" className="ic__h__footer__icon">
+            <a href="https://www.facebook.com/intercomsimcards/" target="_blank" className="ic__h__footer__icon">
               <FaFacebookF size={20} />
             </a>
-            <a href="#" className="ic__h__footer__icon">
+              <a href="https://www.linkedin.com/company/intercom-sim-cards" target="_blank" className="ic__h__footer__icon">
+              <FaLinkedinIn size={20} />
+            </a>
+            <a href="https://x.com/Intercomsim" className="ic__h__footer__icon">
+              <FaXTwitter size={20} />
+            </a>
+            <a href="https://www.youtube.com/@intercomsimcards" className="ic__h__footer__icon">
               <IoLogoYoutube size={20} />
             </a>
-            {/* <a href="#" className="ic__h__footer__icon">
-              <FaLinkedinIn size={20} />
-            </a> */}
+            <a href="https://www.tiktok.com/@intercomsimcards" className="ic__h__footer__icon">
+              <FaTiktok size={20} />
+            </a>
+          
           </div>
         </div>
       </div>

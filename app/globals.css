@@ -137,7 +137,7 @@ html {
 }
 
 .ic__h__footer__icon {
-  @apply hover:text-black;
+  @apply hover:text-black hover:scale-125 transition-all ease-in-out duration-500;
 }
 
 /* ===================================================================== */
