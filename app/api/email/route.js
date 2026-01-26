@@ -1,3 +1,5 @@
+import { connectToDatabase } from "@/helper/db";
+import { usersEmail } from "@/models/email";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -18,6 +20,7 @@ const PAYMENT_LINKS = {
 
 export async function POST(req) {
   try {
+    await connectToDatabase();
     const body = await req.json();
 
     const {
@@ -45,9 +48,7 @@ export async function POST(req) {
     // Pricing calculation (SERVER AUTHORITY)
     const unitPrice = SIM_PRICES[simType];
 
-   
-
-    const subtotal = unitPrice ;
+    const subtotal = unitPrice;
     const total = subtotal;
 
     // Order ID
@@ -297,6 +298,23 @@ export async function POST(req) {
       throw new Error("Customer email failed");
     }
 
+    const customerEmailQuery = new usersEmail({
+      email: email,
+      fullName: fullName,
+      contactNumber: contactNumber,
+      companyNameApplicable: companyNameApplicable,
+      simType: simType,
+      addressLine1: addressLine1,
+      townCity: townCity,
+      county: county,
+      postCode: postCode,
+      country: country,
+      contractAgree: contractAgree,
+      orderId :orderId
+    });
+
+    await customerEmailQuery.save();
+
     /* =====================================================
        SUCCESS RESPONSE
     ===================================================== */
@@ -305,6 +323,11 @@ export async function POST(req) {
       orderId,
       subtotal,
       total,
+      fullName,
+      simType,
+      customerEmailQuery
+
+     
     });
   } catch (err) {
     console.error(err);

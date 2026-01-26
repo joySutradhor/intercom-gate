@@ -1,3 +1,7 @@
+import { connectToDatabase } from "@/helper/db"
+
+connectToDatabase()
+
 export const GET = async () => {
   try {
     const data = {
