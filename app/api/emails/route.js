@@ -19,7 +19,7 @@ export const GET = async()=>{
 
         return Response.json({
           success : false,
-          message : "Internal server error",
+          message : "Internal server error , emails not fetched",
           status : 500
         })
     }
