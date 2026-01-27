@@ -1,14 +1,10 @@
 import { connectToDatabase } from "@/helper/db";
 import { usersEmail } from "@/models/email";
 
-export const GET = async (req) => {
+export const GET = async (req, { params }) => {
   try {
     await connectToDatabase();
-
-    const pathname = req.nextUrl.pathname;
-    console.log("Pathname:", pathname);
-    const orderId = pathname.split("/").pop();
-    console.log("Extracted orderId:", orderId);
+    const { orderId } = await params;
 
     const emails = await usersEmail
       .find({ orderId })
@@ -39,19 +35,50 @@ export const GET = async (req) => {
   }
 };
 
-export const DELETE = async (req) => {
+export const DELETE = async (req, { params }) => {
+  console.log("Params received:", params);
   try {
     await connectToDatabase();
 
-    const { id } = await req.json();
+    const { orderId } = await params;
 
-    const deletedUser = await usersEmail.findByIdAndDelete(id);
+    const deletedUser = await usersEmail.findByIdAndDelete(orderId);
 
     return Response.json({
       success: true,
       status: 200,
       data: deletedUser,
       message: "User deleted successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    return Response.json({
+      success: false,
+      status: 500,
+      message: "Internal server error",
+    });
+  }
+};
+
+export const PATCH = async (req, { params }) => {
+  try {
+    await connectToDatabase();
+
+    const { orderId } = await params;
+
+    const { status } = await req.json();
+
+    const updatedOrder = await usersEmail.findOneAndUpdate(
+      { orderId },
+      { status },
+      { new: true },
+    );
+
+    return Response.json({
+      success: true,
+      status: 200,
+      data: updatedOrder,
+      message: "Order updated successfully",
     });
   } catch (error) {
     console.log(error);
