@@ -5,7 +5,7 @@ const Page = () => {
     <div>
       <div className="relative w-full h-screen overflow-hidden">
         <video
-          src="/intercom-video.mp4"
+          src="/intercom-video-banner.mp4"
           autoPlay
           loop
           muted

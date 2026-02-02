@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { IoMdClose } from "react-icons/io";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 const ActiveCancelSim = () => {
