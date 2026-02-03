@@ -1,23 +1,55 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const SimCards = () => {
   return (
-    <div className="max__width section__top">
-      <div className="text-center mb-16 max-w-3xl mx-auto">
-        <h2 className="title">Flexible 30-Day Rolling SIM Contract</h2>
-        <p className="para mt-4">
-          All SIM cards run on a flexible 30-day rolling contract, allowing you
-          to stay connected with no long-term commitment, no cancellation fees,
-          and full control over your service.
-        </p>
-      </div>
-      <div >
-        
-        <div >
+    <div className="max__width pt-[10vh]">
+      <div>
+        <div>
           <div className="ic__i__cards__parent   ">
+            {/* <div className="text-center mb-16 max-w-3xl mx-auto">
+              <h2 className="title">Flexible 30-Day Rolling SIM Contract</h2>
+              <p className="para mt-4">
+                All SIM cards run on a flexible 30-day rolling contract,
+                allowing you to stay connected with no long-term commitment, no
+                cancellation fees, and full control over your service.
+              </p>
+            </div> */}
+          
+
             <div
+              className="relative   group  ic__card__parent "
+              style={{
+                clipPath:
+                  "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
+                borderRadius: "16px",
+              }}
+            >
+              <h5 className="ic__i__card__sm__title">
+                30-day rolling contract
+              </h5>
+              <div>
+                <h3 className="ic__i__card__title">Domestic SIM</h3>
+                <p className="mb-4">
+                  Designed for single residential properties (one household).
+                </p>
+                <h4>
+                  Price: <span className="ic__i__card__price">£5.00</span> per
+                  month
+                </h4>
+              </div>
+
+              <div className="mt-8">
+                <Link href="/sim-submit-form">
+                  <button className="btn__sytle">
+                    Sign Up
+                    <BsArrowUpRight className="w-4 h-4" />
+                  </button>
+                </Link>
+              </div>
+            </div>
+              <div
               style={{
                 clipPath:
                   "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
@@ -57,38 +89,6 @@ const SimCards = () => {
                     </button>
                   </Link>
                 </div>
-              </div>
-            </div>
-
-            <div
-              className="relative   group  ic__card__parent "
-              style={{
-                clipPath:
-                  "polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%)",
-                borderRadius: "16px",
-              }}
-            >
-              <h5 className="ic__i__card__sm__title">
-                30-day rolling contract
-              </h5>
-              <div>
-                <h3 className="ic__i__card__title">Domestic SIM</h3>
-                <p className="mb-4">
-                  Designed for single residential properties (one household).
-                </p>
-                <h4>
-                  Price: <span className="ic__i__card__price">£5.00</span> per
-                  month
-                </h4>
-              </div>
-
-              <div className="mt-8">
-                <Link href="/sim-submit-form">
-                  <button className="btn__sytle">
-                    Sign Up
-                    <BsArrowUpRight className="w-4 h-4" />
-                  </button>
-                </Link>
               </div>
             </div>
 
