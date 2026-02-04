@@ -173,7 +173,7 @@ const Footer = () => {
 
       {/* Divider & Copyright */}
       <div className="border-t border-gray-200 mt-8 pt-4 text-center text-gray-500 text-sm pb-10">
-        &copy; {new Date().getFullYear()} Intercom Gate UK. All rights reserved.
+        &copy; {new Date().getFullYear()} Intercom Sim Cards. All rights reserved.
         <span className="block mt-1">
           Developed by{" "}
           <span className="font-medium text-gray-600 underline underline-offset-2"><a href="http://resolveidea.com/" target="_blank">Resolve Idea</a></span>
