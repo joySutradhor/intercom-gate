@@ -19,7 +19,7 @@ export default function Home() {
         <Navbar />
       </div>
 
-      <SimCards />
+      {/* <SimCards /> */}
       <WhyChooseUs />
       <HowWorks />
       <WorksGallery />

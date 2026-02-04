@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
     {
       title: "Experienced Professionals",
       description:
-        "Our team has hands-on experience installing and maintaining intercom and automated gate systems. Every project is handled with precision and attention to detail.",
+        "Our team has hands-on experience installing and maintaining intercom and automated gate systems. We also work with a trusted network of experienced installers across the UK, allowing us to support customers in their local area. Please get in touch for further information.",
     },
    
     {
