@@ -24,8 +24,7 @@ const KeyBenefitsCommercial = () => {
           <div className="p-6 border border-black/10 rounded-xl">
             <h3 className="card__title mb-2">Reliable Multi-Unit Connectivity</h3>
             <p className="para">
-              Ensures stable voice and data communication for commercial intercoms,
-              automated gates, and access control systems across offices and
+              Ensures stable voice and data communication for commercial intercoms and access control systems across offices and
               apartment blocks.
             </p>
           </div>

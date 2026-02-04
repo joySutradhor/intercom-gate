@@ -43,8 +43,8 @@ const Page = () => {
               network coverage for modern smart entry solutions.
             </p>
 
-            <div className="flex gap-x-2.5 justify-center mt-10">
-                <button className="btn__sytle ">Call Now</button>
+            <div className="flex justify-center mt-10">
+                {/* <button className="btn__sytle ">Call Now</button> */}
                 <button className="btn__sytle ">Contact Us</button>
             </div>
           </div>

@@ -60,8 +60,7 @@ const UseCasesCommercial = () => {
               Commercial SIM Compatibility & Use Cases
             </h2>
             <p className="text-gray-600 flex-1">
-              Commercial SIM cards are compatible with most multi-unit intercoms,
-              automated gates, and access control devices. Widely used across UK
+              Commercial SIM cards are compatible with most multi-unit intercoms and access control devices. Widely used across UK
               offices, apartment complexes, and commercial properties, they deliver
               secure remote access, uninterrupted service, and seamless integration
               with modern multi-unit entry systems.

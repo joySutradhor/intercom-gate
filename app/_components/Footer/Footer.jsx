@@ -58,7 +58,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="border-t border-black/10 text-black/80 section__top">
-      <div className="max__width items-center flex flex-col md:flex-row justify-between gap-8 py-10">
+      <div className="max__width  flex flex-col md:flex-row justify-between gap-8 py-10">
         {/* Brand / Logo */}
         <div className="flex flex-col gap-4">
           <Image
@@ -107,12 +107,12 @@ const Footer = () => {
             </a>
           </p> */}
 
-          <p className="flex items-center gap-2">
+          {/* <p className="flex items-center gap-2">
             <HiPhone className="text-gray-400" />
             <a href="tel:078894648129" className="hover:underline">
               07889 4648129
             </a>
-          </p>
+          </p> */}
 
           <p className="flex items-center gap-2">
             <HiMail className="text-gray-400" />
@@ -176,7 +176,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Intercom Gate UK. All rights reserved.
         <span className="block mt-1">
           Developed by{" "}
-          <span className="font-medium text-gray-600"><a href="http://resolveidea.com/" target="_blank">Resolve Idea</a></span>
+          <span className="font-medium text-gray-600 underline underline-offset-2"><a href="http://resolveidea.com/" target="_blank">Resolve Idea</a></span>
         </span>
       </div>
     </footer>

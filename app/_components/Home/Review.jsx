@@ -22,7 +22,7 @@ const Testimonials = () => {
       name: "James Wilson",
       role: "Property Manager, Birmingham",
       message:
-        "Highly reliable automated gates and intercoms. The installation team were thorough and explained everything clearly.",
+        "Highly reliable  intercom sim cards . The installation team were thorough and explained everything clearly.",
       image: "/testimonials/james.jpg",
     },
     {

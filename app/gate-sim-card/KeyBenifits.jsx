@@ -8,8 +8,7 @@ const KeyBenifits = () => {
           Key Benefits of Gate SIM Cards for Intercom & Access Control Systems
         </h2>
         <p className="para mt-4">
-          Gate SIM cards are specifically designed for intercom systems,
-          automated gates, and dial-to-open access control solutions. They
+          Gate SIM cards are specifically designed for intercom systems, and dial-to-open access control solutions. They
           provide reliable voice and data connectivity, eliminate the need for
           manual top-ups, and ensure uninterrupted remote gate operation. With
           secure network performance and consistent coverage, Gate SIM cards

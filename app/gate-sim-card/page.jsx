@@ -28,8 +28,7 @@ const Page = () => {
               Gate SIM Cards for Intercom & Dial-to-Open Access Systems
             </h1>
             <p className="text-sm md:text-lg text-gray-200">
-              High-reliability Gate SIM cards designed for intercom systems,
-              automated gates, and access control solutions. Always connected,
+              High-reliability Gate SIM cards designed for intercom systems, and access control solutions. Always connected,
               secure, and built specifically for remote gate operation.
             </p>
           </div>

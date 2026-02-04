@@ -12,7 +12,7 @@ const CommercialSimOverview = () => {
         <p className="para mt-4">
           A Commercial SIM card is a dedicated SIM solution for multi-unit
           properties, offices, apartment blocks, and UK businesses. It provides
-          reliable, always-on connectivity for intercoms, automated gates, and
+          reliable, always-on connectivity for intercoms and
           access control systems. Perfect for property managers, building
           owners, and businesses needing secure, scalable remote access
           solutions across multiple units.
@@ -33,7 +33,7 @@ const CommercialSimOverview = () => {
                 apartment complexes, and multi-unit residential or commercial
                 properties. Unlike standard SIMs, they offer stable, secure, and
                 high-performance connectivity, enabling property managers and
-                business owners to control intercoms, automated gates, and
+                business owners to control intercoms and
                 access systems remotely across multiple units.
               </p>
             </div>

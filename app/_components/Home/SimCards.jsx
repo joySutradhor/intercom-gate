@@ -39,9 +39,9 @@ const SimCards = () => {
                   <p className="mb-1 para">
                     Ideal for dial to open devices, no more top ups.
                   </p>
-                  <p className="mb-4 font-medium italic text-black">
+                  {/* <p className="mb-4 font-medium italic text-black">
                     Billed annually
-                  </p>
+                  </p> */}
                   <h4 className="text-black">
                     Price: <span className="ic__i__card__price ">£1.75</span>{" "}
                     per month

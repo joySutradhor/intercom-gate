@@ -32,7 +32,7 @@ const Page = () => {
             <p className="text-sm md:text-lg text-gray-200">
               Our Commercial SIM cards are tailored for UK businesses, apartment
               blocks, and multi-unit properties, providing reliable, always-on
-              connectivity for intercom systems, automated gates, and access
+              connectivity for intercom systems and access
               control solutions. Enjoy secure remote management, scalable
               connectivity for multiple units, and seamless integration with
               modern commercial intercom and entry systems.

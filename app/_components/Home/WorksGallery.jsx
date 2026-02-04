@@ -32,7 +32,7 @@ const WorksGallery = () => {
         </h2>
         <p className="para mt-4">
           Browse our Works Gallery to see professional installations of GSM
-          intercom systems, SIM-enabled intercoms, and automated gates. Each
+          intercom systems, SIM-enabled intercoms . Each
           project demonstrates our quality workmanship, reliable connectivity,
           and secure access solutions for homes and businesses.
         </p>
