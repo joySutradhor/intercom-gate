@@ -88,7 +88,7 @@ export async function POST(req) {
                     <strong>Intercom SIM Cards</strong><br/>
                     <span style="font-size:12px;color:#666;">
                       info@intercomsimcards.co.uk<br/>
-                      +44 1494 919047
+              
                     </span>
                   </td>
                   <td align="right">
@@ -196,7 +196,7 @@ export async function POST(req) {
                     <strong>Intercom SIM Cards</strong><br/>
                     <span style="font-size:12px;color:#666;">
                       info@intercomsimcards.co.uk<br/>
-                      +44 1494 919047
+             
                     </span>
                   </td>
                   <td align="right">

@@ -1,12 +1,17 @@
 "use client";
 
-import axios from "axios";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { MdOutlineArrowOutward } from "react-icons/md";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const SubmitForm = () => {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -19,9 +24,29 @@ const SubmitForm = () => {
   });
 
   const onSubmit = async (data) => {
+    const result = await Swal.fire({
+      title: "Submit form?",
+      text: "Do you want to send this information now?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#111",
+      confirmButtonText: "Yes, send it",
+      cancelButtonText: "Cancel",
+    });
+
+    if (!result.isConfirmed) return;
+
     try {
-      console.log("ALL FORM DATA:", data);
-      console.log("Contact Number:", data.contactNumber);
+      setLoading(true);
+
+      Swal.fire({
+        title: "Sending...",
+        text: "Please wait while we submit your form",
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
 
       const response = await axios.post("/api/email", data, {
         headers: {
@@ -29,14 +54,31 @@ const SubmitForm = () => {
         },
       });
 
+      Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: "Form submitted successfully",
+        confirmButtonColor: "#111",
+      });
+
+      router.push("/");
+
       console.log("SERVER RESPONSE:", response.data);
-      alert("Form submitted successfully");
     } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Submission Failed",
+        text:
+          error.response?.data?.message ||
+          "Something went wrong. Please try again.",
+      });
+
       console.error(
         "FORM SUBMISSION ERROR:",
         error.response?.data || error.message,
       );
-      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -240,11 +282,17 @@ const SubmitForm = () => {
             </div>
 
             {/* SUBMIT */}
+
             <button
               type="submit"
-              className="bg-[#111] text-white font-semibold px-8 py-2 rounded-full"
+              disabled={loading}
+              className={`px-6 py-3 rounded-lg text-white transition ${
+                loading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-[#111] cursor-pointer"
+              }`}
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
         </div>
