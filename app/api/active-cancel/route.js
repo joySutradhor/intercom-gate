@@ -160,8 +160,9 @@ export async function POST(req) {
     }
 
     const customerActiveRequest = new activeCancel({
-      email: email,
-      simNumber: simNumber,
+      email ,
+      simNumber,
+      action
     });
 
     await customerActiveRequest.save();
