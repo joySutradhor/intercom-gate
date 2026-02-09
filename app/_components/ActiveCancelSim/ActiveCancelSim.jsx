@@ -66,10 +66,10 @@ const ActiveCancelSim = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white/20 px-4 py-28 overflow-auto">
-      <section className="w-full max-w-7xl bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+    <div className="max__width h-full">
+      <section className=" border border-black/10 rounded-2xl p-5  lg:p-10  xl:max-w-7xl mx-auto 2xl:mt-[5vh]">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 ">
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold text-black">
               {activeTab === "activate"
@@ -118,7 +118,7 @@ const ActiveCancelSim = () => {
         {/* Content */}
         <div className="grid lg:grid-cols-2 gap-10 mt-10">
           {/* Form */}
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 order-2 lg:order-1">
             <div>
               <label className="ic__common__label">Email Address</label>
               <input
@@ -136,6 +136,7 @@ const ActiveCancelSim = () => {
 
             <div>
               <label className="ic__common__label">SIM Card Number</label>
+              <p className="text-sm italic mt-1 mb-1.5">Please check your SIM number as shown in the image.</p>
               <input
                 type="text"
                 className="ic__common__input"
@@ -169,7 +170,7 @@ const ActiveCancelSim = () => {
           </form>
 
           {/* Image */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center order-1 lg:order-2">
             <Image
               src="/sim_number.jpeg"
               alt="SIM card number location"
