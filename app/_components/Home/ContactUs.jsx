@@ -53,6 +53,7 @@ const ContactUs = () => {
         icon: "success",
         title: "Message Sent",
         text: "Thank you! We will get back to you shortly.",
+        confirmButtonColor: "#111"
       });
 
       setFormData({ name: "", email: "", message: "" });

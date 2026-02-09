@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import logo from "@/public/logo-intercom.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,34 +10,34 @@ const Navbar = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSearch = async () => {
-    // ✅ EMPTY CHECK FIRST
-    if (!orderId.trim()) {
-      setError("Please enter a valid Order ID");
-      setOrder(null); // ⬅ clear previous result
-      return;
-    }
+  // const handleSearch = async () => {
+  //   // ✅ EMPTY CHECK FIRST
+  //   if (!orderId.trim()) {
+  //     setError("Please enter a valid Order ID");
+  //     setOrder(null); // ⬅ clear previous result
+  //     return;
+  //   }
 
-    setLoading(true);
-    setError("");
-    setOrder(null);
+  //   setLoading(true);
+  //   setError("");
+  //   setOrder(null);
 
-    try {
-      const res = await fetch(`/api/emails/${orderId}`);
-      const data = await res.json();
+  //   try {
+  //     const res = await fetch(`/api/emails/${orderId}`);
+  //     const data = await res.json();
 
-      if (!res.ok || !data?.data?.length) {
-        throw new Error("Order not found");
-      }
+  //     if (!res.ok || !data?.data?.length) {
+  //       throw new Error("Order not found");
+  //     }
 
-      setOrder(data.data[0]);
-    } catch (err) {
-      setError(err.message || "Something went wrong");
-    } finally {
-      setLoading(false);
-      setOrderId(""); // optional: clear input after search
-    }
-  };
+  //     setOrder(data.data[0]);
+  //   } catch (err) {
+  //     setError(err.message || "Something went wrong");
+  //   } finally {
+  //     setLoading(false);
+  //     setOrderId(""); // optional: clear input after search
+  //   }
+  // };
 
   return (
     <nav className="grid grid-cols-3  justify-between items-center px-[5vw] py-10">
@@ -74,7 +74,13 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="cursor-pointer">
+      <div className="flex justify-end">
+        <Link href="/contact">
+          <button className="btn__sytle"> Contact Us </button>
+        </Link>
+      </div>
+
+      {/* <div className="cursor-pointer">
         <div className="flex gap-3   justify-end ">
        
 
@@ -99,7 +105,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Error */}
+ 
         {error && (
           <p className="text-black/80 text-sm mt-3">
             <span className="text-red-500">Order not found.</span> Please check
@@ -114,7 +120,7 @@ const Navbar = () => {
           </p>
         )}
 
-        {/* Result */}
+  
         {order && (
           <div className="mt-6  ">
             <p className="text-gray-700 text-left mt-2 leading-relaxed">
@@ -136,7 +142,7 @@ const Navbar = () => {
             </p>
           </div>
         )}
-      </div>
+      </div> */}
     </nav>
   );
 };
