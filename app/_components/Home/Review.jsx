@@ -54,7 +54,7 @@ const Testimonials = () => {
         {testimonials.map((t, index) => (
           <div
             key={index}
-            className="flex-0 w-72 md:w-[18vw] h-full bg-white p-6 rounded-xl border border-black/10 mx-4"
+            className="flex-0 w-72 md:w-[40vw] xl:w-[20vw] 2xl:w-[18vw] h-full bg-white p-6 rounded-xl border border-black/10 mx-4"
           >
             <p className="text-sm mb-4 italic">"{t.message}"</p>
             <div className="flex items-center gap-4">

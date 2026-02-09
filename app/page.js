@@ -13,13 +13,11 @@ import Navbar from "./_components/Navbar/Navbar";
 export default function Home() {
   return (
     <div className="relative">
-      {/* <Hero /> */}
+     
       <HeroSection />
       <div className="absolute left-0 top-0 w-full z-50">
         <Navbar />
       </div>
-
-      {/* <SimCards /> */}
       <WhyChooseUs />
       <HowWorks />
       <WorksGallery />

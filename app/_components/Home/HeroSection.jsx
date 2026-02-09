@@ -5,11 +5,9 @@ import SimCards from "./SimCards";
 const HeroSection = () => {
   
 
-  
-
   return (
     <section>
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full xl:h-screen overflow-hidden">
         {/* Background Video */}
         <video
           src="/intercom-video-banner.mp4"
@@ -24,7 +22,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/60 z-20" />
 
         {/* Content */}
-        <div className="relative z-40 h-full flex items-center justify-center px-[5%] pt-[20vh]">
+        <div className="relative z-40 h-full flex items-center justify-center px-[5%] pt-[30vh] 2xl:pt-[25vh]">
           <div className=" ">
             <div className="">
               <h1 className="ic__main__title text-center">
@@ -46,7 +44,7 @@ const HeroSection = () => {
              
               </div>
             </div>
-            <div>
+            <div className="pb-20 xl:pb-20">
               <SimCards/>
             </div>
           </div>

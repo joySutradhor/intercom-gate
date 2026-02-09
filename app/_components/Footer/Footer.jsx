@@ -58,7 +58,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="border-t border-black/10 text-black/80 section__top">
-      <div className="max__width  flex flex-col md:flex-row justify-between gap-8 py-10">
+      <div className="max__width  grid md:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 justify-between gap-8 md:gap-12 xl:gap-8 py-10">
         {/* Brand / Logo */}
         <div className="flex flex-col gap-4">
           <Image
@@ -66,7 +66,7 @@ const Footer = () => {
             height={1000}
             width={1000}
             alt="Intercom SIM Cards Logo"
-            className="w-[10vw]"
+            className="w-[30vw] md:w-[15vw] xl:w-[10vw]"
           />
           <p className="text-gray-400 max-w-xs">
             Providing professional GSM intercom systems, SIM-enabled intercoms,

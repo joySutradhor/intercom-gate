@@ -9,7 +9,7 @@ html {
   @apply px-5 md:px-10 xl:px-0;
 }
 .max__width {
-  @apply w-[95vw]  xl:max-w-[90vw] mx-auto;
+  @apply w-[85vw] md:w-[90vw]  xl:max-w-[90vw] mx-auto;
 }
 
 .section__top {
@@ -56,7 +56,7 @@ html {
 /* home banner styles */
 
 .ic__main__title {
-  @apply text-2xl md:text-3xl xl:text-5xl 2xl:text-7xl font-black text-white/80 text-shadow-2xs;
+  @apply text-4xl md:text-5xl xl:text-5xl 2xl:text-7xl font-black text-white/80 text-shadow-2xs;
 }
 
 .ic__para {
@@ -99,7 +99,7 @@ html {
 }
 
 .ic__i__cards__parent {
-  @apply grid md:grid-cols-3 gap-5  h-full overflow-y-scroll  rounded-2xl;
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-5  h-full overflow-y-scroll  rounded-2xl;
 }
 
 .ic__card__parent {

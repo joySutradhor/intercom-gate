@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid xl:grid-cols-2 gap-10">
           <div>
             <Image
               src="/banner.png"

@@ -39,7 +39,7 @@ const WorksGallery = () => {
       </div>
 
       {/* Image Gallery */}
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5">
         {galleryImages.map((img, index) => (
           <div key={index}  className="overflow-hidden rounded-lg">
             <img

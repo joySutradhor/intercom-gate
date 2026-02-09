@@ -75,7 +75,7 @@ const ContactUs = () => {
 
   return (
     <section className="max__width section__top">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-between mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 justify-between mb-10 xl:mb-16">
         <h2 className="title text-3xl md:text-4xl font-bold">
           Get in Touch with UK’s Trusted Intercom & Automated Gate Experts
         </h2>
@@ -87,9 +87,9 @@ const ContactUs = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="flex flex-col lg:flex-row items-center gap-10">
         {/* Image */}
-        <div className="md:w-1/2 w-full">
+        <div className="lg:w-1/2 w-full">
           <img
             src="/gate-photos/image/Commercial/CommercialSIM3.webp"
             alt="Contact Us"
@@ -98,7 +98,7 @@ const ContactUs = () => {
         </div>
 
         {/* Form */}
-        <div className="md:w-1/2 w-full bg-white p-8 rounded-xl shadow-lg">
+        <div className="lg:w-1/2 w-full bg-white p-5 xl:p-8 rounded-xl shadow-lg">
           <h2 className="card__title mb-6">Get In Touch</h2>
           <p className="para mb-6">
             Fill out the form below and our team will respond as soon as

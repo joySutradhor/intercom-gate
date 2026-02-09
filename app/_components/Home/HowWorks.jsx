@@ -45,7 +45,7 @@ const HowWorks = () => {
   ];
 
   return (
-    <div className="max__width section__top bg-gray-100 py-[15vh] rounded-2xl">
+    <div className="max__width section__top bg-gray-100 py-[15vh] p-5 rounded-2xl">
       <div className="text-center mb-16 max-w-4xl mx-auto">
         <h2 className="title">
           How It Works Fast, Secure & Built Around Your Needs

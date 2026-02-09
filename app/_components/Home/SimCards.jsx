@@ -3,7 +3,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const SimCards = () => {
   return (
-    <div className="max__width pt-[10vh]">
+    <div className="max__width pt-[5vh] xl:pt-[10vh]">
       <div>
         <div>
           <div className="ic__i__cards__parent   ">
