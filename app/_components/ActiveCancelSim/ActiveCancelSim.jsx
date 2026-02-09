@@ -6,6 +6,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import axios from "axios";
+import Image from "next/image";
 
 const ActiveCancelSim = () => {
   const [activeTab, setActiveTab] = useState("activate");
@@ -24,7 +25,7 @@ const ActiveCancelSim = () => {
       text: "Please confirm before continuing.",
       icon: "question",
       showCancelButton: true,
-      confirmButtonColor : "#111" ,
+      confirmButtonColor: "#111",
       confirmButtonText: "Yes, confirm",
       cancelButtonText: "No",
     });
@@ -57,7 +58,7 @@ const ActiveCancelSim = () => {
       await Swal.fire({
         icon: "success",
         title: "Success",
-        confirmButtonColor : "#111" ,
+        confirmButtonColor: "#111",
         text:
           activeTab === "activate"
             ? "SIM activate request successfully"
@@ -127,63 +128,72 @@ const ActiveCancelSim = () => {
         </div>
 
         {/* Form */}
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="ic__ac__form__wrapper"
-        >
-          <label className="ic__common__label">
-            Email Address
-            <input
-              type="email"
-              placeholder="Enter email used for subscription"
-              className="ic__common__input"
-              {...register("email", {
-                required: "Email is required",
-              })}
-            />
-            {errors.email && (
-              <span className="text-xs text-red-500">
-                {errors.email.message}
-              </span>
-            )}
-          </label>
-
-          <label className="ic__common__label mt-5">
-            SIM Card Number
-            <input
-              type="text"
-              placeholder="Write your number"
-              className="ic__common__input"
-              {...register("simNumber", {
-                required: "SIM number is required",
-              })}
-            />
-            {errors.simNumber && (
-              <span className="text-xs text-red-500">
-                {errors.simNumber.message}
-              </span>
-            )}
-          </label>
-
+        <div className="grid grid-cols-2 gap-10">
           <div>
-            {" "}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`mt-6 inline-block py-2 px-10 text-sm font-medium rounded-full transition-all ${
-                isSubmitting
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-white text-black hover:bg-black hover:text-white cursor-pointer"
-              }`}
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="ic__ac__form__wrapper"
             >
-              {isSubmitting
-                ? "Processing..."
-                : activeTab === "activate"
-                  ? "Activate SIM"
-                  : "Cancel Subscription"}
-            </button>
+              <label className="ic__common__label">
+                Email Address
+                <input
+                  type="email"
+                  placeholder="Enter email used for subscription"
+                  className="ic__common__input"
+                  {...register("email", {
+                    required: "Email is required",
+                  })}
+                />
+                {errors.email && (
+                  <span className="text-xs text-red-500">
+                    {errors.email.message}
+                  </span>
+                )}
+              </label>
+
+              <label className="ic__common__label mt-5">
+                SIM Card Number
+                <input
+                  type="text"
+                  placeholder="Write your number"
+                  className="ic__common__input"
+                  {...register("simNumber", {
+                    required: "SIM number is required",
+                  })}
+                />
+                {errors.simNumber && (
+                  <span className="text-xs text-red-500">
+                    {errors.simNumber.message}
+                  </span>
+                )}
+              </label>
+
+              <div>
+                {" "}
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`mt-6 inline-block py-2 px-10 text-sm font-medium rounded-full transition-all ${
+                    isSubmitting
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-white text-black hover:bg-black hover:text-white cursor-pointer"
+                  }`}
+                >
+                  {isSubmitting
+                    ? "Processing..."
+                    : activeTab === "activate"
+                      ? "Activate SIM"
+                      : "Cancel Subscription"}
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
+          <div>
+            <Image src="/sim_number.jpeg" height={1000} width={1000} alt="intercom sim number" className="h-[30vh] object-cover  " >
+
+            </Image>
+          </div>
+        </div>
       </section>
     </div>
   );
