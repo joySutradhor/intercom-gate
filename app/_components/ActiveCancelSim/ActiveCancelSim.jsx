@@ -39,21 +39,11 @@ const ActiveCancelSim = () => {
         didOpen: () => Swal.showLoading(),
       });
 
-      const payload = {
+      await axios.post("/api/active-cancel", {
         email: data.email,
         simNumber: data.simNumber,
-        action: activeTab, // activate | cancel
-      };
-
-      console.log("FORM DATA:", payload);
-
-      const response = await axios.post("/api/active-cancel", payload, {
-        headers: {
-          "Content-Type": "application/json",
-        },
+        action: activeTab,
       });
-
-      console.log("SERVER RESPONSE:", response.data);
 
       await Swal.fire({
         icon: "success",
@@ -61,15 +51,12 @@ const ActiveCancelSim = () => {
         confirmButtonColor: "#111",
         text:
           activeTab === "activate"
-            ? "SIM activate request successfully"
-            : "Subscription cancel request successfully",
-        confirmButtonText: "OK",
+            ? "SIM activation request submitted successfully."
+            : "Subscription cancellation request submitted successfully.",
       });
 
       reset();
     } catch (error) {
-      console.error("SUBMISSION ERROR:", error.response?.data || error.message);
-
       Swal.fire({
         icon: "error",
         title: "Failed",
@@ -79,47 +66,48 @@ const ActiveCancelSim = () => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white/50 z-50 px-4">
-      <section className="ic__ac__parent relative w-full max-w-3xl bg-white p-8 rounded-2xl shadow-lg">
+    <div className="min-h-screen flex items-center justify-center bg-white/20 px-4 py-28 overflow-auto">
+      <section className="w-full max-w-7xl bg-white rounded-2xl shadow-lg p-6 sm:p-8">
         {/* Header */}
-        <div className="flex justify-between gap-10">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div>
-            <h2 className="subTitle">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-black">
               {activeTab === "activate"
                 ? "Activate Your GateSIM"
                 : "Cancel Your Subscription"}
             </h2>
-            <p className="text-black/80 mt-2">
+            <p className="text-black/70 mt-2 text-sm sm:text-base">
               {activeTab === "activate"
-                ? "Great! You received your GateSIM. Activate it here."
-                : "Cancel your subscription anytime. Enter your details below."}
+                ? "You’ve received your GateSIM. Activate it using the form below."
+                : "You can cancel your subscription anytime by submitting the form."}
             </p>
           </div>
 
           <Link href="/">
-            <button className="btn__sytle">
+            <button className="btn__sytle flex items-center gap-2 w-fit">
               Back to Home <MdOutlineArrowOutward />
             </button>
           </Link>
         </div>
 
         {/* Tabs */}
-        <div className="flex border-b border-black/20 mb-8 mt-14">
+        <div className="flex border-b border-black/20 mt-10">
           <button
-            type="button"
-            className={`ic__ac__tab__btn ${
+            className={`flex-1 py-3 text-sm sm:text-base font-medium transition cursor-pointer ${
               activeTab === "activate"
-                ? "ic__ac__tab__activek"
-                : "text-black/60"
+                ? "border-b-2 border-black text-black"
+                : "text-black/50"
             }`}
             onClick={() => setActiveTab("activate")}
           >
             Activate SIM
           </button>
+
           <button
-            type="button"
-            className={`ic__ac__tab__btn ${
-              activeTab === "cancel" ? "ic__ac__tab__activek" : "text-black/60"
+            className={`flex-1 py-3 text-sm sm:text-base font-medium transition cursor-pointer ${
+              activeTab === "cancel"
+                ? "border-b-2 border-black text-black"
+                : "text-black/50"
             }`}
             onClick={() => setActiveTab("cancel")}
           >
@@ -127,71 +115,68 @@ const ActiveCancelSim = () => {
           </button>
         </div>
 
-        {/* Form */}
-        <div className="grid grid-cols-2 gap-10">
-          <div>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="ic__ac__form__wrapper"
+        {/* Content */}
+        <div className="grid lg:grid-cols-2 gap-10 mt-10">
+          {/* Form */}
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <div>
+              <label className="ic__common__label">Email Address</label>
+              <input
+                type="email"
+                className="ic__common__input"
+                placeholder="Email used for subscription"
+                {...register("email", { required: "Email is required" })}
+              />
+              {errors.email && (
+                <p className="text-xs text-red-500 mt-1">
+                  {errors.email.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label className="ic__common__label">SIM Card Number</label>
+              <input
+                type="text"
+                className="ic__common__input"
+                placeholder="Enter SIM number"
+                {...register("simNumber", {
+                  required: "SIM number is required",
+                })}
+              />
+              {errors.simNumber && (
+                <p className="text-xs text-red-500 mt-1">
+                  {errors.simNumber.message}
+                </p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`w-full sm:w-auto px-10 py-2 rounded-full text-sm font-medium transition  mt-5 cursor-pointer ${
+                isSubmitting
+                  ? "bg-gray-300 cursor-not-allowed"
+                  : "bg-black text-white hover:bg-black/90"
+              }`}
             >
-              <label className="ic__common__label">
-                Email Address
-                <input
-                  type="email"
-                  placeholder="Enter email used for subscription"
-                  className="ic__common__input"
-                  {...register("email", {
-                    required: "Email is required",
-                  })}
-                />
-                {errors.email && (
-                  <span className="text-xs text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-              </label>
+              {isSubmitting
+                ? "Processing..."
+                : activeTab === "activate"
+                  ? "Activate SIM"
+                  : "Cancel Subscription"}
+            </button>
+          </form>
 
-              <label className="ic__common__label mt-5">
-                SIM Card Number
-                <input
-                  type="text"
-                  placeholder="Write your number"
-                  className="ic__common__input"
-                  {...register("simNumber", {
-                    required: "SIM number is required",
-                  })}
-                />
-                {errors.simNumber && (
-                  <span className="text-xs text-red-500">
-                    {errors.simNumber.message}
-                  </span>
-                )}
-              </label>
-
-              <div>
-                {" "}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`mt-6 inline-block py-2 px-10 text-sm font-medium rounded-full transition-all ${
-                    isSubmitting
-                      ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-white text-black hover:bg-black hover:text-white cursor-pointer"
-                  }`}
-                >
-                  {isSubmitting
-                    ? "Processing..."
-                    : activeTab === "activate"
-                      ? "Activate SIM"
-                      : "Cancel Subscription"}
-                </button>
-              </div>
-            </form>
-          </div>
-          <div>
-            <Image src="/sim_number.jpeg" height={1000} width={1000} alt="intercom sim number" className="h-[30vh] object-cover  " >
-
-            </Image>
+          {/* Image */}
+          <div className="flex items-center justify-center">
+            <Image
+              src="/sim_number.jpeg"
+              alt="SIM card number location"
+              width={500}
+              height={500}
+              className="rounded-xl object-cover w-full max-h-[280px] sm:max-h-[340px] "
+            />
           </div>
         </div>
       </section>

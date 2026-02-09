@@ -103,7 +103,7 @@ html {
 }
 
 .ic__card__parent {
-  @apply h-full p-5 shadow bg-gray-100  rounded-2xl cursor-pointer text-black overflow-hidden;
+  @apply h-full p-5 shadow bg-gray-100  rounded-2xl cursor-pointer text-black ;
 }
 
 .ic__i__card__sm__title {
