@@ -13,10 +13,10 @@ html {
 }
 
 .section__top {
-  @apply mt-[20vh]
+  @apply mt-[10vh]  lg:mt-[20vh]
 }
 .title {
-  @apply text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-black/80 text-shadow-2xs;
+  @apply text-3xl md:text-4xl xl:text-4xl 2xl:text-5xl font-bold text-black/80 text-shadow-2xs;
 }
 .subTitle {
   @apply text-xl md:text-2xl xl:text-3xl font-bold text-black/80  text-shadow-2xs;

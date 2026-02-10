@@ -22,10 +22,10 @@ const UseCases = () => {
       </div>
 
       {/* use cases seciton  */}
-      <div className="px-5 md:px-[8%] py-20 bg-gray-50">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+      <div className=" lg:px-[8%] py-10 xl:py-20 xl:bg-gray-50">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-5 xl:gap-10 items-stretch">
           {/* How It Works Card */}
-          <section className="bg-white p-8 rounded-2xl border border-black/10 flex flex-col">
+          <section className="bg-white p-5 xl:p-8 rounded-2xl border border-black/10 flex flex-col">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               How Does a Gate SIM Card Work?
             </h2>

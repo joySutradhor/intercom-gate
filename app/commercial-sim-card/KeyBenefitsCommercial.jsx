@@ -2,7 +2,7 @@ import React from "react";
 
 const KeyBenefitsCommercial = () => {
   return (
-    <div className="section__top">
+    <div className="section__top max__width">
       {/* Section Header */}
       <div className="text-center mb-16 max-w-5xl mx-auto">
         <h2 className="title">
@@ -19,8 +19,8 @@ const KeyBenefitsCommercial = () => {
       </div>
 
       {/* Benefits Grid */}
-      <section className="px-5 md:px-[8%] bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="lg:px-[8%] bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5 lg:gap-8">
           <div className="p-6 border border-black/10 rounded-xl">
             <h3 className="card__title mb-2">Reliable Multi-Unit Connectivity</h3>
             <p className="para">

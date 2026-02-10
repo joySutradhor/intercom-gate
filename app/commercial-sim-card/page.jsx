@@ -14,7 +14,7 @@ const Page = () => {
         <Navbar />
       </nav>
 
-      <section className="relative w-full h-[60vh] md:h-[70vh] pt-[15vh]">
+      <section className="relative w-full h-[70vh] md:h-[70vh] pt-[15vh]">
         <img
           src="/gate-photos/image/Commercial/CommercialSIM.webp"
           alt="Gate SIM cards for intercom and dial to open gate access systems"

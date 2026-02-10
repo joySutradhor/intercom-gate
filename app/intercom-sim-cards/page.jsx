@@ -6,6 +6,7 @@ import Testimonials from "../_components/Home/Review";
 import ContactUs from "../_components/Home/ContactUs";
 import Benefits from "./Benefits";
 import Footer from "../_components/Footer/Footer";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -16,7 +17,7 @@ const Page = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="relative  h-[60vh] md:h-[60vh]">
+      <div className="relative  h-[80vh] md:h-[60vh]">
         {/* Background Image */}
         <Image
           src="/gallery/intercom SIM 6.webp"
@@ -30,7 +31,7 @@ const Page = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         {/* Content */}
-        <div className="absolute inset-0 flex items-center justify-center  pt-[15vh] ">
+        <div className="absolute inset-0 flex items-center justify-center  pt-[15vh] px-5 lg:px-0 ">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h3 className="title !text-white mb-4">
               All About Intercom SIM Cards
@@ -44,20 +45,22 @@ const Page = () => {
             </p>
 
             <div className="flex justify-center mt-10">
-                {/* <button className="btn__sytle ">Call Now</button> */}
+              {/* <button className="btn__sytle ">Call Now</button> */}
+              <Link href="/contact">
                 <button className="btn__sytle ">Contact Us</button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Next Section */}
-      <div className="section__top max__width ">
-        <SimCards/>
-        <Testimonials/>
-        <Benefits/>
-        <ContactUs/>
-        <Footer/>
+      <div className=" max__width ">
+        <SimCards />
+        <Testimonials />
+        <Benefits />
+        <ContactUs />
+        <Footer />
       </div>
     </div>
   );

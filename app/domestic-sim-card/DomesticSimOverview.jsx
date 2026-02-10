@@ -21,10 +21,10 @@ const DomesticSimOverview = () => {
 
       {/* Content Area */}
       <div>
-        <section className="px-5 md:px-[8%] bg-white">
-          <div className="grid grid-cols-2 gap-10">
+        <section className="lg:px-[8%] bg-white">
+          <div className="grid lg:grid-cols-2 gap-10">
             {/* Text Card */}
-            <div className="bg-gray-100 rounded-xl p-10">
+            <div className="bg-gray-100 rounded-xl p-5 lg:p-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 What Is a Domestic SIM Card?
               </h2>
@@ -49,7 +49,7 @@ const DomesticSimOverview = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 h-full gap-10 mt-10">
+          <div className="grid lg:grid-cols-2 h-full gap-10 mt-10">
             {/* Image */}
             <div>
               <Image
@@ -62,7 +62,7 @@ const DomesticSimOverview = () => {
             </div>
 
             {/* Who Should Use */}
-            <div className="bg-gray-100 rounded-xl p-10">
+            <div className="bg-gray-100 rounded-xl p-5 lg:p-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-10">
                 Who Should Use a Domestic SIM Card?
               </h2>
