@@ -80,8 +80,8 @@ const ContactUs = () => {
           Get in Touch with UK’s Trusted Intercom  Experts
         </h2>
         <p className="para mt-4 text-gray-700">
-          Have questions about our GSM intercom systems, SIM-enabled intercoms,
-          or automated gate installations? Reach out today! Our friendly team
+          Have questions about our GSM intercom systems, SIM-enabled intercoms
+          installations? Reach out today! Our friendly team
           provides professional advice, fast support, and seamless installation
           services across the UK.
         </p>
