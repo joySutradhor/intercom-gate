@@ -172,7 +172,7 @@ const ActiveCancelSim = () => {
           {/* Image */}
           <div className="flex items-center justify-center order-1 lg:order-2">
             <Image
-              src="/sim_number.jpeg"
+              src="/sim.jpeg"
               alt="SIM card number location"
               width={500}
               height={500}
