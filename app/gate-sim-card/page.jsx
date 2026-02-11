@@ -6,6 +6,85 @@ import UseCases from "./UseCases";
 import CTA from "../_components/Home/CTA";
 import Footer from "../_components/Footer/Footer";
 
+export const metadata = {
+  title: "Gate SIM Cards | GSM SIMs for Electric Gates & Intercoms UK",
+
+  description:
+    "Reliable GSM SIM cards for electric gates and gate intercoms. Low-cost plans, instant activation, UK coverage. Keep your gate access control connected 24/7.",
+
+  keywords: [
+    "gate SIM card",
+    "electric gate SIM",
+    "GSM gate SIM card",
+    "gate intercom SIM",
+    "automatic gate SIM",
+    "gate access control SIM",
+    "GSM SIM for gates",
+    "electric gate GSM SIM",
+    "gate opener SIM card",
+    "sliding gate SIM",
+    "swing gate SIM card",
+    "gate controller SIM UK",
+    "wireless gate SIM",
+    "remote gate access SIM",
+  ],
+
+  authors: [{ name: "Intercom SIM Cards" }],
+  creator: "Intercom SIM Cards",
+  publisher: "Intercom SIM Cards",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://intercomsimcards.co.uk/gate-sim-card",
+  },
+
+  openGraph: {
+    title: "Gate SIM Cards | Reliable GSM SIMs for Electric Gates UK",
+    description:
+      "Specialised GSM SIM cards designed for electric gates and gate intercom systems. Ensure uninterrupted access control with reliable UK network coverage, flexible monthly plans, and instant online activation. Perfect for residential, commercial, and industrial gate systems.",
+    url: "https://intercomsimcards.co.uk/gate-sim-card",
+    siteName: "Intercom SIM Cards",
+    images: [
+      {
+        url: "https://intercomsimcards.co.uk/og-image-gate-sim.jpg",
+        width: 1200,
+        height: 630,
+        alt: "GSM SIM Cards for Electric Gates and Gate Intercoms",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Gate SIM Cards | GSM SIMs for Electric Gates UK",
+    description:
+      "Reliable GSM SIM cards for electric gates and gate intercoms. Low-cost plans, instant activation, UK coverage. Keep your gate access control connected.",
+    images: ["https://intercomsimcards.co.uk/og-image-gate-sim.jpg"],
+  },
+
+  category: "Telecommunications",
+
+  other: {
+    "product:category": "Gate Access Control",
+    "product:availability": "in stock",
+    "product:condition": "new",
+  },
+};
+
 const Page = () => {
   return (
     <main>

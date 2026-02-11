@@ -20,7 +20,7 @@ export const metadata = {
   },
 
   description:
-    "Intercom SIM Cards offer a simple, reliable, and low-cost GSM SIM solution for gate intercoms, door entry systems, and GSM access control units. Easy online activation, safe UK delivery, flexible SIM management, and dedicated UK customer support.",
+    "Low-cost GSM SIM cards for gate intercoms & door entry systems. Easy activation, UK delivery & support. Reliable connectivity for access control.",
 
   keywords: [
     "GSM intercom SIM cards",

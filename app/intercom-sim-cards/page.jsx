@@ -8,6 +8,77 @@ import Benefits from "./Benefits";
 import Footer from "../_components/Footer/Footer";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Intercom SIM Cards | GSM SIMs for Gate & Door Entry Systems",
+
+  description:
+    "Dedicated GSM SIM cards for intercom systems. Perfect for gates, doors & access control. Easy setup, reliable connection, flexible plans. Order online today.",
+
+  keywords: [
+    "intercom SIM cards",
+    "GSM SIM for intercoms",
+    "gate intercom SIM card",
+    "door entry system SIM",
+    "access control GSM SIM",
+    "intercom connectivity",
+    "GSM SIM for gates",
+    "door phone SIM card",
+    "intercom system SIM UK",
+    "wireless intercom SIM",
+    "GSM access control SIM",
+    "entry system SIM card",
+  ],
+
+  authors: [{ name: "Intercom SIM Cards" }],
+  creator: "Intercom SIM Cards",
+  publisher: "Intercom SIM Cards",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://intercomsimcards.co.uk/intercom-sim-cards",
+  },
+
+  openGraph: {
+    title: "Intercom SIM Cards | Dedicated GSM SIMs for Access Control",
+    description:
+      "Specialised GSM SIM cards built for intercom systems. Reliable connectivity for gate intercoms, door entry units, and access control systems. Simple online ordering, UK delivery, and expert support.",
+    url: "https://intercomsimcards.co.uk/intercom-sim-cards",
+    siteName: "Intercom SIM Cards",
+    images: [
+      {
+        url: "https://intercomsimcards.co.uk/og-image-intercom-sims.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Intercom SIM Cards for Gate and Door Entry Systems",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Intercom SIM Cards | GSM SIMs for Gate & Door Systems",
+    description:
+      "Dedicated GSM SIM cards for intercom systems. Perfect for gates, doors & access control. Easy setup, reliable connection, flexible plans.",
+    images: ["https://intercomsimcards.co.uk/og-image-intercom-sims.jpg"],
+  },
+
+  category: "Telecommunications",
+};
+
 const Page = () => {
   return (
     <div>
