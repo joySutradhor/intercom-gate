@@ -33,9 +33,9 @@ const Page = () => {
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center  pt-[15vh] px-5 lg:px-0 ">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h3 className="title !text-white mb-4">
+            <h1 className="title !text-white mb-4">
               All About Intercom SIM Cards
-            </h3>
+            </h1>
             <p className="subtitle ">
               Intercom SIM cards provide reliable, secure, and high-performance
               connectivity for intercom and gate access systems. Designed for

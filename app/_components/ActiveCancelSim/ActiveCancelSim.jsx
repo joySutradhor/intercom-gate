@@ -71,11 +71,11 @@ const ActiveCancelSim = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 ">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-black">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-black">
               {activeTab === "activate"
                 ? "Activate Your GateSIM"
                 : "Cancel Your Subscription"}
-            </h2>
+            </h1>
             <p className="text-black/70 mt-2 text-sm sm:text-base">
               {activeTab === "activate"
                 ? "You’ve received your GateSIM. Activate it using the form below."

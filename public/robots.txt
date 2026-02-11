@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://intercomsimcards.co.uk/sitemap.xml
