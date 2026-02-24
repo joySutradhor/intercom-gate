@@ -15,6 +15,7 @@ const SubmitForm = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -24,6 +25,23 @@ const SubmitForm = () => {
   });
 
   const onSubmit = async (data) => {
+    if (!data.contractAgree) {
+      const agreeResult = await Swal.fire({
+        title: "Agreement Required",
+        text: "You must agree to the contract terms before submitting.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#111",
+        confirmButtonText: "OK, I Agree",
+        cancelButtonText: "Cancel",
+      });
+
+      if (!agreeResult.isConfirmed) return;
+
+      setValue("contractAgree", true);
+      return;
+    }
+
     const result = await Swal.fire({
       title: "Submit form?",
       text: "Do you want to send this information now?",
@@ -257,10 +275,7 @@ const SubmitForm = () => {
               </h2>
 
               <label className="flex items-center gap-2 text-sm cursor-pointer mb-6">
-                <input
-                  type="checkbox"
-                  {...register("contractAgree", { required: true })}
-                />
+                <input type="checkbox" {...register("contractAgree")} />
                 <span>
                   I agree to the contract terms
                   <span className="text-red-500">*</span>
@@ -272,7 +287,7 @@ const SubmitForm = () => {
                   <li>All prices are subject to VAT.</li>
                   <li>Network issues are outside our control.</li>
                   <li>Packages may be reviewed every 30 days.</li>
-                  <li>30 days’ notice required for cancellation.</li>
+                  <li>30 days' notice required for cancellation.</li>
                   <li>Replacement SIMs may incur charges.</li>
                   <li>SIMs must only be used in intercom systems.</li>
                   <li>Prices may increase with inflation.</li>
@@ -282,7 +297,6 @@ const SubmitForm = () => {
             </div>
 
             {/* SUBMIT */}
-
             <button
               type="submit"
               disabled={loading}
