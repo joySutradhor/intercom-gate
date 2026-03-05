@@ -46,7 +46,7 @@ const SubmitForm = () => {
 
     const result = await Swal.fire({
       title: "Submit form?",
-      text: "Do you want to send this information now?",
+      text: "Do you want to send this information now ?",
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#111",
