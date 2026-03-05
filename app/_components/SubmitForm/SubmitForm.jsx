@@ -25,6 +25,8 @@ const SubmitForm = () => {
   });
 
   const onSubmit = async (data) => {
+
+    // console.log("FORM DATA:", data);
     if (!data.contractAgree) {
       const agreeResult = await Swal.fire({
         title: "Agreement Required",
@@ -264,6 +266,21 @@ const SubmitForm = () => {
                   >
                     <option value="United Kingdom">United Kingdom</option>
                   </select>
+                </div>
+
+                <div>
+                  <label className="ic__common__label">
+                    Intercom Make / Model *{" "}
+                    <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    placeholder="e.g. Hikvision, BPT, Fermax, Aiphone"
+                    className="ic__common__input"
+                    {...register("intercomModel", { required: true })}
+                  />
+                  {errors.intercomModel && (
+                    <p className="text-red-500 text-sm">Required</p>
+                  )}
                 </div>
               </div>
             </div>
