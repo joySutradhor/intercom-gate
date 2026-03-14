@@ -26,7 +26,7 @@ const SubmitForm = () => {
 
   const onSubmit = async (data) => {
 
-    // console.log("FORM DATA:", data);
+    console.log("FORM DATA show:", data);
     if (!data.contractAgree) {
       const agreeResult = await Swal.fire({
         title: "Agreement Required",

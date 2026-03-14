@@ -6,9 +6,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Server-side price list (single source of truth)
 const SIM_PRICES = {
-  domestic: 5,
-  commercial: 15,
-  gate: 1.75,
+  domestic: 5.00,
+  commercial: 15.00,
+  gate: 21.00,
 };
 
 // Payment links per SIM type (replace with real links)
@@ -35,6 +35,7 @@ export async function POST(req) {
       postCode,
       country,
       contractAgree,
+      intercomModel
     } = body;
 
     // Basic validation
@@ -124,11 +125,13 @@ export async function POST(req) {
               <table width="100%" cellpadding="10" cellspacing="0" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;">
                 <tr style="background:#f5f5f5;">
                   <th align="left">Item</th>
+                  <th align="center">Intercom Make / Model</th>
                   <th align="center">Qty</th>
                   <th align="right">Price</th>
                 </tr>
                 <tr>
                   <td>${simType} SIM Card</td>
+                   <td align="center">${intercomModel || "N/A"}</td>
                   <td align="center">1</td>
                   <td align="right">£${subtotal.toFixed(2)}</td>
                 </tr>
@@ -234,11 +237,13 @@ export async function POST(req) {
               <table width="100%" cellpadding="10" cellspacing="0" style="border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;">
                 <tr style="background:#f5f5f5;">
                   <th align="left">Item</th>
+                  <th align="center">Intercom Make / Model </th>
                   <th align="center">Qty</th>
                   <th align="right">Price</th>
                 </tr>
                 <tr>
                   <td>${simType} SIM Card</td>
+                  <td align="center">${intercomModel || "N/A"}</td>
                   <td align="center">1</td>
                   <td align="right">£${subtotal.toFixed(2)}</td>
                 </tr>
