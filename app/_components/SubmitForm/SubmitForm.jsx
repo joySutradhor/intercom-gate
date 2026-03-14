@@ -77,7 +77,7 @@ const SubmitForm = () => {
       Swal.fire({
         icon: "success",
         title: "Success!",
-        text: "Success! Check your email for the direct debit form.",
+        text: "Success! Please check your email to make a payment",
         confirmButtonColor: "#111",
       });
 
